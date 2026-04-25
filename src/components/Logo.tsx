@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 
 export default function Logo({
   height = 52,
@@ -10,14 +10,10 @@ export default function Logo({
   withTagline?: boolean;
 }) {
   return (
-    <Image
+    <img
       src="/logo-kap.png"
       alt="KAP — Le bon cap pour votre projet"
-      width={0}
-      height={0}
-      sizes="200px"
-      style={{ width: "auto", height: `${height}px` }}
-      priority
+      style={{ height: `${height}px`, width: "auto", display: "block" }}
     />
   );
 }
