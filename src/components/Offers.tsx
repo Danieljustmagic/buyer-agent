@@ -135,7 +135,7 @@ export default function Offers() {
               </p>
 
               {/* Features */}
-              <ul className="space-y-2.5 flex-1">
+              <ul className="space-y-2.5 mb-0">
                 {o.features.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-sm group/feat cursor-default">
                     <span
@@ -157,18 +157,20 @@ export default function Offers() {
                 ))}
               </ul>
 
-              {/* CTA */}
-              <a
-                href="#contact"
-                className={`flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4
-                  font-bold text-sm mt-8 transition-all duration-200 hover:-translate-y-px ${
-                    o.highlighted
-                      ? "bg-accent text-night hover:bg-accent-hover"
-                      : "bg-night text-white hover:bg-night-mid"
-                  }`}
-              >
-                {o.cta} <ArrowRight className="w-3.5 h-3.5" />
-              </a>
+              {/* CTA — mt-auto pousse le bouton en bas quelle que soit la hauteur */}
+              <div className="mt-auto pt-8">
+                <a
+                  href="#contact"
+                  className={`flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4
+                    font-bold text-sm transition-all duration-200 hover:-translate-y-px ${
+                      o.highlighted
+                        ? "bg-accent text-night hover:bg-accent-hover"
+                        : "bg-night text-white hover:bg-night-mid"
+                    }`}
+                >
+                  {o.cta} <ArrowRight className="w-3.5 h-3.5" />
+                </a>
+              </div>
             </div>
           ))}
         </div>
