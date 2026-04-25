@@ -2,48 +2,64 @@ import { ArrowRight, Calendar } from "lucide-react";
 
 export default function CTAFinal() {
   return (
-    <section id="contact" className="bg-bg-soft section-padding">
-      <div className="container-narrow text-center">
-        <div
-          className="bg-night rounded-3xl px-8 py-16 md:p-20 relative overflow-hidden"
-        >
-          {/* Background glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full
-            bg-accent/10 blur-3xl pointer-events-none" />
+    <section id="contact" className="bg-beige section-pad">
+      <div className="container-narrow">
+        <div className="bg-night rounded-3xl px-8 py-16 md:px-16 md:py-20 relative overflow-hidden">
+
+          {/* Halo ambre */}
+          <div
+            className="absolute -bottom-20 -right-20 w-80 h-80 opacity-10 pointer-events-none"
+            style={{ background: "radial-gradient(circle, #C8A96A 0%, transparent 70%)" }}
+          />
+
+          {/* Ligne signature */}
+          <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-accent/25 to-transparent hidden md:block" />
 
           <div className="relative">
-            <p className="text-accent font-semibold text-sm uppercase tracking-widest mb-6">
-              Passons à l&apos;action
-            </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+            {/* Tag */}
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-6 h-px bg-accent" />
+              <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">La vraie question</span>
+            </div>
+
+            {/* Titre */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
               Faisons le point sur votre projet.
             </h2>
-            <p className="text-white/60 text-lg leading-relaxed mb-12 max-w-xl mx-auto">
-              Un échange de 30 minutes pour comprendre où vous en êtes, ce dont
-              vous avez besoin, et comment on peut vous aider concrètement.
+
+            {/* Punchline serif */}
+            <p className="font-serif italic text-xl text-white/50 mb-8 leading-relaxed max-w-lg">
+              &ldquo;Le sujet n&apos;est pas de savoir si vous allez acheter. Le sujet est de savoir si vous allez acheter dans les bonnes conditions.&rdquo;
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* Description */}
+            <p className="text-white/55 text-base leading-relaxed mb-10 max-w-md">
+              Un premier échange de 30 minutes pour comprendre votre projet,
+              identifier vos enjeux et vérifier la faisabilité. Offert, sans engagement.
+            </p>
+
+            {/* CTA */}
+            <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#"
                 className="inline-flex items-center justify-center gap-3 bg-accent text-night
-                  font-semibold px-8 py-4 rounded-full text-base hover:bg-accent-hover
+                  font-bold px-8 py-4 rounded-xl text-sm tracking-wide hover:bg-accent-hover
                   transition-all duration-200 shadow-lg shadow-accent/20 hover:-translate-y-0.5"
               >
-                <Calendar className="w-5 h-5" />
-                Prendre rendez-vous
+                <Calendar className="w-4 h-4" />
+                Réserver mon rendez-vous (30 min)
               </a>
               <a
                 href="mailto:contact@buyer-agent.fr"
-                className="inline-flex items-center justify-center gap-2 text-white/60
-                  hover:text-white px-6 py-4 text-base transition-colors duration-200"
+                className="inline-flex items-center justify-center gap-2 text-white/40
+                  hover:text-white px-6 py-4 text-sm transition-colors duration-200"
               >
-                Nous écrire <ArrowRight className="w-4 h-4" />
+                Écrire directement <ArrowRight className="w-4 h-4" />
               </a>
             </div>
 
-            <p className="text-white/30 text-sm mt-8">
-              Sans engagement. Réponse sous 24h.
+            <p className="text-white/20 text-xs mt-6">
+              Offert · 30 minutes · Sans engagement
             </p>
           </div>
         </div>

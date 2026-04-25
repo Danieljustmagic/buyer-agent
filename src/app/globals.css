@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,24 +10,36 @@
   }
 
   body {
-    @apply font-sans antialiased text-night bg-white;
+    @apply font-sans antialiased text-text-main bg-white;
+  }
+
+  h1, h2, h3 {
+    @apply tracking-tight;
   }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .section-pad {
+    @apply py-24 px-6 md:px-12 lg:px-16;
   }
 
-  .section-padding {
-    @apply py-24 px-6 md:px-12 lg:px-24;
+  .container-main {
+    @apply max-w-5xl mx-auto;
   }
 
   .container-narrow {
     @apply max-w-3xl mx-auto;
   }
 
-  .container-wide {
-    @apply max-w-6xl mx-auto;
+  /* Ligne de parcours – signature visuelle */
+  .journey-line::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #C8A96A 20%, #C8A96A 80%, transparent);
+    opacity: 0.4;
   }
 }

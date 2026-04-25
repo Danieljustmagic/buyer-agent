@@ -1,57 +1,66 @@
-import { X } from "lucide-react";
-
-const problems = [
-  "Des dizaines d'annonces sans réel fil directeur",
-  "Des visites qui s'accumulent sans décision claire",
-  "Une hésitation paralysante au moment d'offrir",
-  "La peur de se tromper sur un engagement aussi important",
-  "L'impression d'avancer seul, sans méthode ni repère",
+const tasks = [
+  "Définir un projet réaliste",
+  "Trouver les bons biens",
+  "Analyser leur valeur réelle",
+  "Négocier au bon moment",
+  "Sécuriser le financement",
+  "Coordonner tous les intervenants",
 ];
 
 export default function Problem() {
   return (
-    <section className="bg-bg-soft section-padding">
-      <div className="container-wide">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section className="bg-beige section-pad">
+      <div className="container-main">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+
           {/* Left */}
           <div>
-            <p className="text-accent-hover font-semibold text-sm uppercase tracking-widest mb-4">
-              Le constat
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-night leading-tight mb-6">
-              Aujourd&apos;hui, la plupart des acheteurs avancent seuls.
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-6 h-px bg-accent" />
+              <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">Le constat</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-night leading-tight mb-6">
+              Acheter aujourd&apos;hui, c&apos;est gérer seul un projet complexe.
             </h2>
-            <p className="text-slate-500 text-lg leading-relaxed">
-              Le marché est complexe, l&apos;information abondante, et
-              pourtant&hellip; personne n&apos;est vraiment dans votre camp.
+            <p className="text-text-muted text-lg leading-relaxed mb-8">
+              Pour acheter, vous devez :
+            </p>
+
+            <ul className="space-y-4">
+              {tasks.map((task, i) => (
+                <li key={task} className="flex items-center gap-4">
+                  <span className="text-xs font-bold text-accent/60 w-5 flex-shrink-0">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="w-px h-4 bg-accent/20 flex-shrink-0" />
+                  <span className="text-text-main font-medium">{task}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right — punchline */}
+          <div className="lg:pt-20">
+            <div className="bg-white rounded-2xl p-8 border border-beige-dark shadow-sm">
+              <p className="text-text-muted text-base leading-relaxed mb-6">
+                Et personne ne fait tout ça pour vous.
+              </p>
+              <blockquote className="border-l-2 border-accent pl-6">
+                <p className="font-serif italic text-xl text-night leading-relaxed">
+                  &ldquo;Vous prenez une décision importante… tout en gérant seul toute la complexité.&rdquo;
+                </p>
+              </blockquote>
+            </div>
+
+            {/* Jalon visuel */}
+            <div className="mt-8 flex items-center gap-4">
+              <div className="w-3 h-3 rounded-full bg-accent flex-shrink-0" />
+              <div className="h-px flex-1 bg-gradient-to-r from-accent/40 to-transparent" />
+            </div>
+            <p className="text-text-muted text-sm mt-3 pl-7">
+              C&apos;est là qu&apos;intervient un accompagnement structuré.
             </p>
           </div>
-
-          {/* Right — problems list */}
-          <div className="space-y-4">
-            {problems.map((problem) => (
-              <div
-                key={problem}
-                className="flex items-start gap-4 bg-white rounded-2xl p-5 border border-slate-100
-                  shadow-sm hover:shadow-md transition-shadow duration-200"
-              >
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-50 flex items-center justify-center mt-0.5">
-                  <X className="w-4 h-4 text-red-400" />
-                </div>
-                <p className="text-night font-medium leading-snug">{problem}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Punchline */}
-        <div className="mt-16 pt-12 border-t border-slate-200">
-          <p className="text-xl md:text-2xl font-semibold text-night text-center max-w-2xl mx-auto leading-snug">
-            Le problème n&apos;est pas le marché.{" "}
-            <span className="text-slate-400">
-              C&apos;est l&apos;absence de cadre.
-            </span>
-          </p>
         </div>
       </div>
     </section>

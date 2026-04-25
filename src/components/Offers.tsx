@@ -2,110 +2,147 @@ import { ArrowRight } from "lucide-react";
 
 const offers = [
   {
-    tag: "Essentiel",
-    title: "Clarifier votre projet",
+    tag: "Gratuit",
+    title: "Faire le point sur mon projet",
+    duration: "30 min",
+    price: "Offert",
+    priceNote: "sans engagement",
     description:
-      "Une session de travail approfondie pour définir précisément votre projet, cadrer vos critères et structurer votre démarche. Idéal pour partir sur de bonnes bases.",
+      "Un premier échange pour comprendre votre situation et déterminer la meilleure suite à donner.",
     features: [
-      "Audit de votre situation",
-      "Définition des critères réels",
-      "Plan d'action personnalisé",
-      "Recommandations stratégiques",
+      "Comprendre votre projet",
+      "Identifier vos enjeux",
+      "Vérifier la faisabilité",
+      "Définir la meilleure suite",
     ],
     highlighted: false,
+    cta: "Réserver mon rendez-vous",
   },
   {
-    tag: "Ponctuel",
-    title: "Sécuriser une opportunité",
+    tag: "Session",
+    title: "Session de Décision Immobilière",
+    duration: "Travail approfondi",
+    price: "490 €",
+    priceNote: "session unique",
     description:
-      "Vous avez trouvé un bien qui vous intéresse ? Nous intervenons pour analyser, conseiller et sécuriser votre décision avant l'engagement.",
+      "Un travail approfondi pour cadrer complètement votre projet et construire une stratégie d'achat claire.",
     features: [
-      "Analyse complète du bien",
-      "Évaluation du prix de marché",
-      "Points de vigilance juridiques",
-      "Accompagnement à la négociation",
+      "Cadrer complètement votre projet",
+      "Définir des critères précis",
+      "Construire une stratégie d'achat",
+      "Valider les options",
+      "Établir un plan d'action clair",
     ],
     highlighted: true,
+    cta: "Démarrer la session",
   },
   {
-    tag: "Premium",
-    title: "Accompagnement global",
+    tag: "Complet",
+    title: "Accompagnement jusqu'à la signature",
+    duration: "Durée de votre projet",
+    price: "À partir de 2 500 €",
+    priceNote: "sur mesure",
     description:
-      "Un partenariat complet de la clarification du projet jusqu'à la signature. Nous sommes à vos côtés à chaque étape, sans exception.",
+      "Je vous accompagne sur l'ensemble du parcours, de la définition du projet jusqu'à l'acte de vente.",
     features: [
-      "Tout l'essentiel inclus",
-      "Sourcing et sélection des biens",
-      "Visites et analyses en continu",
-      "Suivi jusqu'à la signature",
+      "Définition précise du projet",
+      "Sélection hebdomadaire de biens",
+      "Analyse des opportunités",
+      "Accompagnement à la négociation",
+      "Mise en relation avec des pros",
+      "Coordination globale",
+      "Suivi jusqu'à l'acte",
     ],
     highlighted: false,
+    cta: "En savoir plus",
   },
 ];
 
 export default function Offers() {
   return (
-    <section className="bg-white section-padding">
-      <div className="container-wide">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-accent-hover font-semibold text-sm uppercase tracking-widest mb-4">
-            Nos offres
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-night leading-tight mb-4">
-            Un accompagnement adapté à votre situation.
+    <section id="offres" className="bg-white section-pad">
+      <div className="container-main">
+
+        <div className="max-w-xl mb-14">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-6 h-px bg-accent" />
+            <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">Aller plus loin</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-night leading-tight">
+            Tout commence par un rendez-vous.
           </h2>
-          <p className="text-slate-500 text-lg">
-            Chaque acheteur est différent. Chaque accompagnement l&apos;est aussi.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {offers.map((offer) => (
+        <div className="grid md:grid-cols-3 gap-6">
+          {offers.map((o) => (
             <div
-              key={offer.title}
-              className={`rounded-2xl p-8 flex flex-col transition-all duration-300 ${
-                offer.highlighted
-                  ? "bg-night text-white shadow-2xl shadow-night/20 scale-105"
-                  : "bg-bg-soft border border-slate-100 hover:shadow-lg"
+              key={o.title}
+              className={`rounded-2xl p-8 flex flex-col border transition-all duration-300 ${
+                o.highlighted
+                  ? "bg-night border-night shadow-2xl shadow-night/30"
+                  : "bg-beige border-beige-dark hover:border-accent/30 hover:shadow-lg"
               }`}
             >
+              {/* Tag */}
               <div className="mb-6">
                 <span
-                  className={`text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full ${
-                    offer.highlighted
+                  className={`text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full ${
+                    o.highlighted
                       ? "bg-accent text-night"
-                      : "bg-white text-slate-500 border border-slate-200"
+                      : "bg-white border border-beige-dark text-text-muted"
                   }`}
                 >
-                  {offer.tag}
+                  {o.tag}
                 </span>
               </div>
 
+              {/* Titre */}
               <h3
-                className={`text-xl font-bold mb-4 ${
-                  offer.highlighted ? "text-white" : "text-night"
+                className={`font-extrabold text-lg leading-snug mb-2 ${
+                  o.highlighted ? "text-white" : "text-night"
                 }`}
               >
-                {offer.title}
+                {o.title}
               </h3>
 
+              {/* Prix */}
+              <div className="mb-5">
+                <span
+                  className={`text-2xl font-black ${
+                    o.highlighted ? "text-accent" : "text-night"
+                  }`}
+                >
+                  {o.price}
+                </span>
+                <span
+                  className={`text-xs ml-2 ${
+                    o.highlighted ? "text-white/40" : "text-text-light"
+                  }`}
+                >
+                  {o.priceNote}
+                </span>
+              </div>
+
+              {/* Description */}
               <p
-                className={`text-sm leading-relaxed mb-8 ${
-                  offer.highlighted ? "text-white/60" : "text-slate-500"
+                className={`text-sm leading-relaxed mb-6 ${
+                  o.highlighted ? "text-white/55" : "text-text-muted"
                 }`}
               >
-                {offer.description}
+                {o.description}
               </p>
 
-              <ul className="space-y-3 mb-10 flex-1">
-                {offer.features.map((f) => (
-                  <li key={f} className="flex items-center gap-3 text-sm">
+              {/* Features */}
+              <ul className="space-y-2.5 mb-8 flex-1">
+                {o.features.map((f) => (
+                  <li key={f} className="flex items-start gap-3 text-sm">
                     <span
-                      className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
-                        offer.highlighted ? "bg-accent" : "bg-night"
+                      className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${
+                        o.highlighted ? "bg-accent" : "bg-accent/60"
                       }`}
                     />
                     <span
-                      className={offer.highlighted ? "text-white/80" : "text-slate-600"}
+                      className={o.highlighted ? "text-white/70" : "text-text-muted"}
                     >
                       {f}
                     </span>
@@ -113,16 +150,17 @@ export default function Offers() {
                 ))}
               </ul>
 
+              {/* CTA */}
               <a
                 href="#contact"
-                className={`inline-flex items-center justify-center gap-2 rounded-full px-6 py-3
-                  font-medium text-sm transition-all duration-200 ${
-                    offer.highlighted
+                className={`inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3
+                  font-bold text-sm transition-all duration-200 hover:-translate-y-px ${
+                    o.highlighted
                       ? "bg-accent text-night hover:bg-accent-hover"
-                      : "bg-night text-white hover:bg-night-light"
+                      : "bg-night text-white hover:bg-night-mid"
                   }`}
               >
-                En savoir plus <ArrowRight className="w-4 h-4" />
+                {o.cta} <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
           ))}
