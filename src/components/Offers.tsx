@@ -73,103 +73,108 @@ export default function Offers() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 items-stretch">
           {offers.map((o, i) => (
+            /* Wrapper = grid item, étire à la hauteur de la rangée */
             <div
               key={o.title}
-              className={`rounded-2xl p-8 pb-24 flex flex-col relative border transition-all duration-300 ${
-                o.highlighted
-                  ? "bg-night border-night shadow-2xl shadow-night/30 hover:-translate-y-1"
-                  : "bg-beige border-beige-dark hover:border-accent/30 hover:shadow-lg hover:-translate-y-0.5"
-              }`}
               data-reveal
               data-reveal-delay={i * 100}
             >
-              {/* Tag */}
-              <div className="mb-6">
-                <span
-                  className={`text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full ${
-                    o.highlighted
-                      ? "bg-accent text-night"
-                      : "bg-white border border-beige-dark text-text-muted"
-                  }`}
-                >
-                  {o.tag}
-                </span>
-              </div>
-
-              {/* Titre */}
-              <h3
-                className={`font-extrabold text-lg leading-snug mb-2 ${
-                  o.highlighted ? "text-white" : "text-night"
+              {/* Carte = h-full pour remplir le wrapper */}
+              <div
+                className={`h-full rounded-2xl p-8 pb-28 flex flex-col relative border transition-all duration-300 ${
+                  o.highlighted
+                    ? "bg-night border-night shadow-2xl shadow-night/30 hover:-translate-y-1"
+                    : "bg-beige border-beige-dark hover:border-accent/30 hover:shadow-lg hover:-translate-y-0.5"
                 }`}
               >
-                {o.title}
-              </h3>
-
-              {/* Prix */}
-              <div className="mb-5">
-                <span
-                  className={`text-2xl font-black ${
-                    o.highlighted ? "text-accent" : "text-night"
-                  }`}
-                >
-                  {o.price}
-                </span>
-                <span
-                  className={`text-xs ml-2 ${
-                    o.highlighted ? "text-white/60" : "text-text-light"
-                  }`}
-                >
-                  {o.priceNote}
-                </span>
-              </div>
-
-              {/* Description */}
-              <p
-                className={`text-sm leading-relaxed mb-6 ${
-                  o.highlighted ? "text-white/75" : "text-text-muted"
-                }`}
-              >
-                {o.description}
-              </p>
-
-              {/* Features */}
-              <ul className="space-y-2.5 mb-0">
-                {o.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3 text-sm group/feat cursor-default">
-                    <span
-                      className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 transition-transform
-                        duration-200 group-hover/feat:scale-125 ${
-                        o.highlighted ? "bg-accent" : "bg-accent/70"
-                      }`}
-                    />
-                    <span
-                      className={`transition-colors duration-200 ${
-                        o.highlighted
-                          ? "text-white/85 group-hover/feat:text-white"
-                          : "text-text-muted group-hover/feat:text-text-main"
-                      }`}
-                    >
-                      {f}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* CTA — ancré en absolu en bas de chaque carte */}
-              <div className="absolute bottom-8 left-8 right-8">
-                <a
-                  href="#contact"
-                  className={`flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4
-                    font-bold text-sm transition-all duration-200 hover:-translate-y-px ${
+                {/* Tag */}
+                <div className="mb-6">
+                  <span
+                    className={`text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full ${
                       o.highlighted
-                        ? "bg-accent text-night hover:bg-accent-hover"
-                        : "bg-night text-white hover:bg-night-mid"
+                        ? "bg-accent text-night"
+                        : "bg-white border border-beige-dark text-text-muted"
                     }`}
+                  >
+                    {o.tag}
+                  </span>
+                </div>
+
+                {/* Titre */}
+                <h3
+                  className={`font-extrabold text-lg leading-snug mb-2 ${
+                    o.highlighted ? "text-white" : "text-night"
+                  }`}
                 >
-                  {o.cta} <ArrowRight className="w-3.5 h-3.5" />
-                </a>
+                  {o.title}
+                </h3>
+
+                {/* Prix */}
+                <div className="mb-5">
+                  <span
+                    className={`text-2xl font-black ${
+                      o.highlighted ? "text-accent" : "text-night"
+                    }`}
+                  >
+                    {o.price}
+                  </span>
+                  <span
+                    className={`text-xs ml-2 ${
+                      o.highlighted ? "text-white/60" : "text-text-light"
+                    }`}
+                  >
+                    {o.priceNote}
+                  </span>
+                </div>
+
+                {/* Description */}
+                <p
+                  className={`text-sm leading-relaxed mb-6 ${
+                    o.highlighted ? "text-white/75" : "text-text-muted"
+                  }`}
+                >
+                  {o.description}
+                </p>
+
+                {/* Features */}
+                <ul className="space-y-2.5">
+                  {o.features.map((f) => (
+                    <li key={f} className="flex items-start gap-3 text-sm group/feat cursor-default">
+                      <span
+                        className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 transition-transform
+                          duration-200 group-hover/feat:scale-125 ${
+                          o.highlighted ? "bg-accent" : "bg-accent/70"
+                        }`}
+                      />
+                      <span
+                        className={`transition-colors duration-200 ${
+                          o.highlighted
+                            ? "text-white/85 group-hover/feat:text-white"
+                            : "text-text-muted group-hover/feat:text-text-main"
+                        }`}
+                      >
+                        {f}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA — absolu, ancré en bas de chaque carte */}
+                <div className="absolute bottom-8 left-8 right-8">
+                  <a
+                    href="#contact"
+                    className={`flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4
+                      font-bold text-sm transition-all duration-200 hover:-translate-y-px ${
+                        o.highlighted
+                          ? "bg-accent text-night hover:bg-accent-hover"
+                          : "bg-night text-white hover:bg-night-mid"
+                      }`}
+                  >
+                    {o.cta} <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
               </div>
             </div>
           ))}
