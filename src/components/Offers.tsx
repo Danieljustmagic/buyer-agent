@@ -63,7 +63,7 @@ export default function Offers() {
     <section id="offres" className="bg-white section-pad">
       <div className="container-main">
 
-        <div className="max-w-xl mb-14">
+        <div className="max-w-xl mb-14" data-reveal>
           <div className="flex items-center gap-3 mb-6">
             <div className="w-6 h-px bg-accent" />
             <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">Aller plus loin</span>
@@ -74,14 +74,16 @@ export default function Offers() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {offers.map((o) => (
+          {offers.map((o, i) => (
             <div
               key={o.title}
               className={`rounded-2xl p-8 flex flex-col border transition-all duration-300 ${
                 o.highlighted
-                  ? "bg-night border-night shadow-2xl shadow-night/30"
-                  : "bg-beige border-beige-dark hover:border-accent/30 hover:shadow-lg"
+                  ? "bg-night border-night shadow-2xl shadow-night/30 hover:-translate-y-1"
+                  : "bg-beige border-beige-dark hover:border-accent/30 hover:shadow-lg hover:-translate-y-0.5"
               }`}
+              data-reveal
+              data-reveal-delay={i * 100}
             >
               {/* Tag */}
               <div className="mb-6">
@@ -116,7 +118,7 @@ export default function Offers() {
                 </span>
                 <span
                   className={`text-xs ml-2 ${
-                    o.highlighted ? "text-white/40" : "text-text-light"
+                    o.highlighted ? "text-white/60" : "text-text-light"
                   }`}
                 >
                   {o.priceNote}
@@ -126,7 +128,7 @@ export default function Offers() {
               {/* Description */}
               <p
                 className={`text-sm leading-relaxed mb-6 ${
-                  o.highlighted ? "text-white/55" : "text-text-muted"
+                  o.highlighted ? "text-white/75" : "text-text-muted"
                 }`}
               >
                 {o.description}
@@ -135,14 +137,19 @@ export default function Offers() {
               {/* Features */}
               <ul className="space-y-2.5 mb-8 flex-1">
                 {o.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3 text-sm">
+                  <li key={f} className="flex items-start gap-3 text-sm group/feat cursor-default">
                     <span
-                      className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 ${
-                        o.highlighted ? "bg-accent" : "bg-accent/60"
+                      className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 transition-transform
+                        duration-200 group-hover/feat:scale-125 ${
+                        o.highlighted ? "bg-accent" : "bg-accent/70"
                       }`}
                     />
                     <span
-                      className={o.highlighted ? "text-white/70" : "text-text-muted"}
+                      className={`transition-colors duration-200 ${
+                        o.highlighted
+                          ? "text-white/85 group-hover/feat:text-white"
+                          : "text-text-muted group-hover/feat:text-text-main"
+                      }`}
                     >
                       {f}
                     </span>

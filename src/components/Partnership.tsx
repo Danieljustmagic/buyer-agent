@@ -8,7 +8,7 @@ export default function Partnership() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Left — texte */}
-          <div>
+          <div data-reveal>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-6 h-px bg-accent" />
               <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
@@ -34,15 +34,21 @@ export default function Partnership() {
           <div className="grid grid-cols-2 gap-4">
 
             {/* Moi */}
-            <div className="bg-night rounded-2xl p-6">
+            <div
+              className="bg-night rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
+              data-reveal
+              data-reveal-delay="100"
+            >
               <div className="flex items-center gap-2 mb-5">
                 <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                 <span className="text-accent text-xs font-bold uppercase tracking-widest">Moi</span>
               </div>
               <ul className="space-y-3">
                 {myRole.map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-white/70 text-sm">
-                    <span className="w-1 h-1 rounded-full bg-accent/50 flex-shrink-0" />
+                  <li key={item} className="flex items-center gap-3 text-white/80 text-sm
+                    group/item hover:text-white transition-colors duration-200 cursor-default">
+                    <span className="w-1 h-1 rounded-full bg-accent/60 flex-shrink-0
+                      group-hover/item:bg-accent transition-colors duration-200" />
                     {item}
                   </li>
                 ))}
@@ -50,15 +56,22 @@ export default function Partnership() {
             </div>
 
             {/* Vous */}
-            <div className="bg-white rounded-2xl p-6 border border-beige-dark">
+            <div
+              className="bg-white rounded-2xl p-6 border border-beige-dark hover:shadow-lg
+                transition-shadow duration-300"
+              data-reveal
+              data-reveal-delay="180"
+            >
               <div className="flex items-center gap-2 mb-5">
                 <div className="w-1.5 h-1.5 rounded-full bg-text-light" />
                 <span className="text-text-muted text-xs font-bold uppercase tracking-widest">Vous</span>
               </div>
               <ul className="space-y-3">
                 {yourRole.map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-text-muted text-sm">
-                    <span className="w-1 h-1 rounded-full bg-text-light flex-shrink-0" />
+                  <li key={item} className="flex items-center gap-3 text-text-muted text-sm
+                    group/item hover:text-text-main transition-colors duration-200 cursor-default">
+                    <span className="w-1 h-1 rounded-full bg-text-light flex-shrink-0
+                      group-hover/item:bg-accent transition-colors duration-200" />
                     {item}
                   </li>
                 ))}

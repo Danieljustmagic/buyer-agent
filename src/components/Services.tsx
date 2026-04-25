@@ -67,7 +67,7 @@ export default function Services() {
       <div className="container-main">
 
         {/* Header */}
-        <div className="max-w-xl mb-16">
+        <div className="max-w-xl mb-16" data-reveal>
           <div className="flex items-center gap-3 mb-6">
             <div className="w-6 h-px bg-accent" />
             <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">Ce que je fais concrètement</span>
@@ -84,12 +84,17 @@ export default function Services() {
 
           <div className="space-y-0">
             {services.map((s, i) => (
-              <div key={s.num} className="relative flex gap-8 md:gap-12 pb-0">
+              <div
+                key={s.num}
+                className="relative flex gap-8 md:gap-12 pb-0"
+                data-reveal
+                data-reveal-delay={i * 90}
+              >
 
                 {/* Jalon */}
                 <div className="flex-shrink-0 relative z-10 hidden md:flex flex-col items-center">
-                  <div className={`w-3 h-3 rounded-full border-2 mt-2 ${
-                    i === 0 ? "bg-accent border-accent" : "bg-white border-accent/40"
+                  <div className={`w-3 h-3 rounded-full border-2 mt-2 transition-colors duration-300 ${
+                    i === 0 ? "bg-accent border-accent" : "bg-white border-accent/40 group-hover:border-accent"
                   }`} />
                   {i < services.length - 1 && (
                     <div className="w-px flex-1 bg-accent/15 mt-1 min-h-[60px]" />
@@ -98,10 +103,12 @@ export default function Services() {
 
                 {/* Card */}
                 <div className={`flex-1 pb-10 ${i === services.length - 1 ? "pb-0" : ""}`}>
-                  <div className="group bg-beige hover:bg-white rounded-2xl border border-beige-dark hover:border-accent/20 hover:shadow-lg transition-all duration-300 overflow-hidden">
+                  <div className="group bg-beige hover:bg-white rounded-2xl border border-beige-dark
+                    hover:border-accent/25 hover:shadow-lg transition-all duration-300 overflow-hidden">
                     <div className="p-6">
                       <div className="flex items-start gap-4">
-                        <span className="text-xs font-black text-accent/50 tracking-widest mt-1 flex-shrink-0">
+                        <span className="text-xs font-black text-accent/80 tracking-widest mt-1
+                          flex-shrink-0 group-hover:text-accent transition-colors duration-200">
                           {s.num}
                         </span>
                         <div className="flex-1">
@@ -112,7 +119,9 @@ export default function Services() {
                             {s.items.map((item) => (
                               <li
                                 key={item}
-                                className="text-xs text-text-muted bg-white border border-beige-dark rounded-full px-3 py-1"
+                                className="text-xs text-text-muted bg-white border border-beige-dark
+                                  rounded-full px-3 py-1 hover:border-accent/30 hover:text-text-main
+                                  transition-colors duration-200"
                               >
                                 {item}
                               </li>
@@ -141,13 +150,15 @@ export default function Services() {
                         {/* Blocs */}
                         <div className="grid sm:grid-cols-2 gap-5">
                           {s.extra.blocks.map((block) => (
-                            <div key={block.heading} className="bg-beige rounded-xl p-5 border border-beige-dark">
+                            <div key={block.heading} className="bg-beige rounded-xl p-5 border border-beige-dark
+                              hover:border-accent/20 transition-colors duration-200">
                               <p className="text-night text-xs font-semibold mb-3 leading-snug">
                                 {block.heading}
                               </p>
                               <ul className="space-y-2">
                                 {block.points.map((pt) => (
-                                  <li key={pt} className="flex items-start gap-2 text-xs text-text-muted">
+                                  <li key={pt} className="flex items-start gap-2 text-xs text-text-muted
+                                    hover:text-text-main transition-colors duration-200">
                                     <span className="w-1 h-1 rounded-full bg-accent mt-1.5 flex-shrink-0" />
                                     {pt}
                                   </li>
@@ -171,7 +182,7 @@ export default function Services() {
         </div>
 
         {/* Punchline finale */}
-        <div className="mt-14 pt-10 border-t border-beige-dark">
+        <div className="mt-14 pt-10 border-t border-beige-dark" data-reveal>
           <p className="text-xl font-semibold text-night text-center max-w-2xl mx-auto leading-relaxed">
             Vous avancez avec méthode, sans perdre de temps,
             <span className="text-accent"> et en limitant les risques.</span>

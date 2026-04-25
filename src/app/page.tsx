@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import ScrollObserver from "@/components/ScrollObserver";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import Services from "@/components/Services";
@@ -14,6 +15,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
+      <ScrollObserver />
       <Navbar />
       <main>
         <Hero />

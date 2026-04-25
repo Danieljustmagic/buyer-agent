@@ -11,7 +11,7 @@ export default function Expertise() {
         <div className="grid lg:grid-cols-2 gap-16 items-start">
 
           {/* Left */}
-          <div>
+          <div data-reveal>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-6 h-px bg-accent" />
               <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
@@ -23,15 +23,15 @@ export default function Expertise() {
               25 ans au cœur du financement immobilier.
             </h2>
 
-            <p className="text-white/55 text-lg leading-relaxed mb-10">
+            <p className="text-white/70 text-lg leading-relaxed mb-10">
               Ce qui fait la différence ne se voit pas toujours.
             </p>
 
             {/* Citation finale — serif */}
             <div className="border-l-2 border-accent pl-6 space-y-4">
-              <p className="text-white/70 text-base leading-relaxed">
+              <p className="text-white/80 text-base leading-relaxed">
                 C&apos;est ce qui évite les décisions précipitées…
-                <span className="text-white/90"> comme celles que l&apos;on repousse trop longtemps.</span>
+                <span className="text-white"> comme celles que l&apos;on repousse trop longtemps.</span>
               </p>
             </div>
           </div>
@@ -40,26 +40,43 @@ export default function Expertise() {
           <div className="space-y-5">
 
             {/* Ce que ça permet */}
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-              <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-5">
+            <div
+              className="bg-white/5 border border-white/10 rounded-2xl p-6
+                hover:bg-white/8 hover:border-white/15 transition-all duration-300"
+              data-reveal
+              data-reveal-delay="120"
+            >
+              <p className="text-white/60 text-xs font-semibold uppercase tracking-widest mb-5">
                 Aujourd&apos;hui, cela me permet :
               </p>
               <ul className="space-y-4">
-                {abilities.map((a) => (
-                  <li key={a} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
-                    <span className="text-white/75 text-sm leading-relaxed">{a}</span>
+                {abilities.map((a, i) => (
+                  <li
+                    key={a}
+                    className="flex items-start gap-3 group/item cursor-default"
+                    data-reveal
+                    data-reveal-delay={120 + i * 80}
+                  >
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0
+                      group-hover/item:scale-125 transition-transform duration-200" />
+                    <span className="text-white/80 text-sm leading-relaxed
+                      group-hover/item:text-white transition-colors duration-200">{a}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Décider avec justesse */}
-            <div className="bg-accent/10 border border-accent/20 rounded-2xl p-6">
+            <div
+              className="bg-accent/10 border border-accent/20 rounded-2xl p-6
+                hover:bg-accent/15 hover:border-accent/30 transition-all duration-300"
+              data-reveal
+              data-reveal-delay="200"
+            >
               <p className="text-accent text-xs font-bold uppercase tracking-widest mb-3">
                 Je vous aide aussi à décider avec justesse.
               </p>
-              <p className="text-white/65 text-sm leading-relaxed">
+              <p className="text-white/75 text-sm leading-relaxed">
                 Au-delà des chiffres, il s&apos;agit de savoir{" "}
                 <span className="text-white font-medium">quand s&apos;engager</span>,{" "}
                 <span className="text-white font-medium">à quelles conditions</span>, et{" "}

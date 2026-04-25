@@ -9,7 +9,7 @@ export default function Qualification() {
   return (
     <section className="bg-night-mid section-pad">
       <div className="container-narrow">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" data-reveal>
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="w-6 h-px bg-accent" />
             <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">Pour qui ?</span>
@@ -25,13 +25,16 @@ export default function Qualification() {
             <div
               key={c}
               className="flex items-start gap-4 bg-white/5 border border-white/8 rounded-xl p-5
-                hover:bg-white/8 hover:border-accent/20 transition-all duration-200"
+                hover:bg-white/10 hover:border-accent/30 hover:-translate-y-0.5
+                transition-all duration-200 cursor-default"
+              data-reveal
+              data-reveal-delay={i * 90}
             >
               <div className="flex-shrink-0 w-7 h-7 rounded-full bg-accent/15 border border-accent/30
-                flex items-center justify-center mt-0.5">
+                flex items-center justify-center mt-0.5 group-hover:bg-accent/25 transition-colors duration-200">
                 <span className="text-accent text-xs font-black">{i + 1}</span>
               </div>
-              <p className="text-white/75 leading-snug">{c}</p>
+              <p className="text-white/85 leading-snug">{c}</p>
             </div>
           ))}
         </div>

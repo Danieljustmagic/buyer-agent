@@ -17,29 +17,41 @@ export default function CTAFinal() {
 
           <div className="relative">
             {/* Tag */}
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-8" data-reveal>
               <div className="w-6 h-px bg-accent" />
               <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">La vraie question</span>
             </div>
 
             {/* Titre */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
+            <h2
+              className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4"
+              data-reveal
+              data-reveal-delay="80"
+            >
               Faisons le point sur votre projet.
             </h2>
 
             {/* Punchline serif */}
-            <p className="font-serif italic text-xl text-white/50 mb-8 leading-relaxed max-w-lg">
+            <p
+              className="font-serif italic text-xl text-white/80 mb-8 leading-relaxed max-w-lg"
+              data-reveal
+              data-reveal-delay="160"
+            >
               &ldquo;Le sujet n&apos;est pas de savoir si vous allez acheter. Le sujet est de savoir si vous allez acheter dans les bonnes conditions.&rdquo;
             </p>
 
             {/* Description */}
-            <p className="text-white/55 text-base leading-relaxed mb-10 max-w-md">
+            <p
+              className="text-white/75 text-base leading-relaxed mb-10 max-w-md"
+              data-reveal
+              data-reveal-delay="220"
+            >
               Un premier échange de 30 minutes pour comprendre votre projet,
               identifier vos enjeux et vérifier la faisabilité. Offert, sans engagement.
             </p>
 
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4" data-reveal data-reveal-delay="300">
               <a
                 href="#"
                 className="inline-flex items-center justify-center gap-3 bg-accent text-night
@@ -51,14 +63,18 @@ export default function CTAFinal() {
               </a>
               <a
                 href="mailto:contact@buyer-agent.fr"
-                className="inline-flex items-center justify-center gap-2 text-white/40
+                className="inline-flex items-center justify-center gap-2 text-white/65
                   hover:text-white px-6 py-4 text-sm transition-colors duration-200"
               >
                 Écrire directement <ArrowRight className="w-4 h-4" />
               </a>
             </div>
 
-            <p className="text-white/20 text-xs mt-6">
+            <p
+              className="text-white/45 text-xs mt-6"
+              data-reveal
+              data-reveal-delay="380"
+            >
               Offert · 30 minutes · Sans engagement
             </p>
           </div>
