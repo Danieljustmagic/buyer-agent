@@ -24,7 +24,7 @@ export default function Problem() {
               data-reveal
               data-reveal-delay="80"
             >
-              Acheter aujourd&apos;hui, c&apos;est gérer seul un projet complexe.
+              Acheter aujourd&apos;hui, c&apos;est devoir tout gérer seul.
             </h2>
             <p
               className="text-text-muted text-lg leading-relaxed mb-8"
