@@ -73,14 +73,9 @@ export default function Expertise() {
               data-reveal
               data-reveal-delay="200"
             >
-              <p className="text-accent text-xs font-bold uppercase tracking-widest mb-3">
-                Parce qu&apos;une mauvaise décision coûte bien plus qu&apos;un accompagnement.
-              </p>
-              <p className="text-white/75 text-sm leading-relaxed">
-                Au-delà des chiffres, il s&apos;agit de savoir{" "}
-                <span className="text-white font-medium">quand s&apos;engager</span>,{" "}
-                <span className="text-white font-medium">à quelles conditions</span>, et{" "}
-                <span className="text-white font-medium">pourquoi</span>.
+              <p className="text-white font-semibold text-base leading-relaxed">
+                Parce qu&apos;une mauvaise décision coûte{" "}
+                <span className="text-accent">bien plus qu&apos;un accompagnement.</span>
               </p>
             </div>
 
