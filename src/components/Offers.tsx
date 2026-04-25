@@ -77,7 +77,7 @@ export default function Offers() {
           {offers.map((o, i) => (
             <div
               key={o.title}
-              className={`rounded-2xl p-8 flex flex-col border transition-all duration-300 ${
+              className={`rounded-2xl p-8 flex flex-col h-full border transition-all duration-300 ${
                 o.highlighted
                   ? "bg-night border-night shadow-2xl shadow-night/30 hover:-translate-y-1"
                   : "bg-beige border-beige-dark hover:border-accent/30 hover:shadow-lg hover:-translate-y-0.5"
