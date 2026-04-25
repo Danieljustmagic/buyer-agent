@@ -42,47 +42,31 @@ export default function Hero() {
             data-reveal
             data-reveal-delay="80"
           >
-            Vous cherchez à acheter
+            Vous voulez acheter
             <br />
-            un bien immobilier…
-            <br />
-            <span className="text-accent">mais vous ne voulez pas</span>
-            <br />
-            <span className="text-accent">vous tromper.</span>
+            un bien immobilier.
           </h1>
 
           {/* Ligne de séparation */}
           <div className="w-8 h-0.5 bg-accent/40 mb-8" data-reveal data-reveal-delay="160" />
 
-          {/* Corps */}
+          {/* Tension */}
           <p
-            className="text-white/75 text-lg mb-8 leading-relaxed"
+            className="text-accent text-xl font-semibold mb-6 leading-snug"
             data-reveal
             data-reveal-delay="200"
           >
-            Je vous accompagne concrètement de A à Z :
+            Mais au moment de décider, tout devient plus complexe.
           </p>
 
-          <ul className="space-y-3 mb-12">
-            {[
-              "Définir un projet solide",
-              "Sélectionner des biens pertinents",
-              "Analyser et négocier",
-              "Sécuriser votre achat jusqu'à la signature",
-            ].map((item, i) => (
-              <li
-                key={item}
-                className="flex items-center gap-3 text-white/80 text-base group/item
-                  hover:text-white transition-colors duration-200 cursor-default"
-                data-reveal
-                data-reveal-delay={240 + i * 70}
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0
-                  group-hover/item:scale-125 transition-transform duration-200" />
-                {item}
-              </li>
-            ))}
-          </ul>
+          {/* Corps */}
+          <p
+            className="text-white/75 text-lg leading-relaxed mb-12"
+            data-reveal
+            data-reveal-delay="280"
+          >
+            Je vous accompagne pour structurer votre projet, analyser les bonnes opportunités et sécuriser votre achat jusqu&apos;à la signature.
+          </p>
 
           {/* CTA principal */}
           <div
