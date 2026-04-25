@@ -74,7 +74,7 @@ export default function Expertise() {
               data-reveal-delay="200"
             >
               <p className="text-accent text-xs font-bold uppercase tracking-widest mb-3">
-                Nous vous aidons aussi à décider avec justesse.
+                Parce qu&apos;une mauvaise décision coûte bien plus qu&apos;un accompagnement.
               </p>
               <p className="text-white/75 text-sm leading-relaxed">
                 Au-delà des chiffres, il s&apos;agit de savoir{" "}
