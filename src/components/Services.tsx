@@ -136,19 +136,19 @@ export default function Services() {
                             {s.extra.label}
                           </span>
                         </div>
-                        <p className="text-text-muted text-sm leading-relaxed mb-6">
+                        <p className="text-text-muted text-base leading-relaxed mb-6">
                           {s.extra.intro}
                         </p>
                         <div className="grid sm:grid-cols-2 gap-5">
                           {s.extra.blocks.map((block) => (
                             <div key={block.heading} className="bg-beige rounded-xl p-5 border border-beige-dark
                               hover:border-accent/20 transition-colors duration-200">
-                              <p className="text-night text-xs font-semibold mb-3 leading-snug">
+                              <p className="text-night text-sm font-semibold mb-3 leading-snug">
                                 {block.heading}
                               </p>
                               <ul className="space-y-2">
                                 {block.points.map((pt) => (
-                                  <li key={pt} className="flex items-start gap-2 text-xs text-text-muted
+                                  <li key={pt} className="flex items-start gap-2 text-sm text-text-muted
                                     hover:text-text-main transition-colors duration-200">
                                     <span className="w-1 h-1 rounded-full bg-accent mt-1.5 flex-shrink-0" />
                                     {pt}
@@ -158,7 +158,7 @@ export default function Services() {
                             </div>
                           ))}
                         </div>
-                        <p className="text-night font-semibold text-sm mt-5 pl-4 border-l-2 border-accent">
+                        <p className="text-night font-semibold text-base mt-5 pl-4 border-l-2 border-accent">
                           {s.extra.conclusion}
                         </p>
                       </div>

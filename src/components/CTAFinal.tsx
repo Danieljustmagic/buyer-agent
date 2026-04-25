@@ -40,7 +40,7 @@ export default function CTAFinal() {
 
             {/* Punchline serif */}
             <p
-              className="font-serif italic text-xl text-white/80 mb-8 leading-relaxed max-w-lg"
+              className="font-serif italic text-2xl text-white/80 mb-8 leading-relaxed max-w-lg"
               data-reveal
               data-reveal-delay="160"
             >
@@ -49,7 +49,7 @@ export default function CTAFinal() {
 
             {/* Description */}
             <p
-              className="text-white/75 text-base leading-relaxed mb-10 max-w-md"
+              className="text-white/75 text-lg leading-relaxed mb-10 max-w-md"
               data-reveal
               data-reveal-delay="220"
             >
@@ -68,7 +68,7 @@ export default function CTAFinal() {
                 <Calendar className="w-4 h-4" />
                 Clarifier mon projet (30 min)
               </a>
-              <p className="text-white/60 text-sm leading-relaxed max-w-sm">
+              <p className="text-white/60 text-base leading-relaxed max-w-sm">
                 Un premier échange pour comprendre votre situation et déterminer la meilleure suite à donner.
               </p>
             </div>
@@ -81,7 +81,7 @@ export default function CTAFinal() {
               <a
                 href="mailto:contact@buyer-agent.fr"
                 className="inline-flex items-center gap-2 text-white/50
-                  hover:text-white text-sm transition-colors duration-200"
+                  hover:text-white text-base transition-colors duration-200"
               >
                 Écrire directement <ArrowRight className="w-4 h-4" />
               </a>

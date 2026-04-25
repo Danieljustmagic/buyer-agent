@@ -43,7 +43,7 @@ export default function Problem() {
                   data-reveal
                   data-reveal-delay={200 + i * 70}
                 >
-                  <span className="text-xs font-bold text-accent w-5 flex-shrink-0
+                  <span className="text-sm font-bold text-accent w-5 flex-shrink-0
                     group-hover/item:scale-110 transition-transform duration-200">
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -74,7 +74,7 @@ export default function Problem() {
               <div className="w-3 h-3 rounded-full bg-accent flex-shrink-0" />
               <div className="h-px flex-1 bg-gradient-to-r from-accent/40 to-transparent" />
             </div>
-            <p className="text-text-muted text-sm mt-3 pl-7">
+            <p className="text-text-muted text-base mt-3 pl-7">
               C&apos;est là qu&apos;intervient un accompagnement structuré.
             </p>
           </div>

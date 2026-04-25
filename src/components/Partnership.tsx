@@ -45,7 +45,7 @@ export default function Partnership() {
               </div>
               <ul className="space-y-3">
                 {ourRole.map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-white/80 text-sm
+                  <li key={item} className="flex items-center gap-3 text-white/80 text-base
                     group/item hover:text-white transition-colors duration-200 cursor-default">
                     <span className="w-1 h-1 rounded-full bg-accent/60 flex-shrink-0
                       group-hover/item:bg-accent transition-colors duration-200" />
@@ -68,7 +68,7 @@ export default function Partnership() {
               </div>
               <ul className="space-y-3">
                 {yourRole.map((item) => (
-                  <li key={item} className="flex items-center gap-3 text-text-muted text-sm
+                  <li key={item} className="flex items-center gap-3 text-text-muted text-base
                     group/item hover:text-text-main transition-colors duration-200 cursor-default">
                     <span className="w-1 h-1 rounded-full bg-text-light flex-shrink-0
                       group-hover/item:bg-accent transition-colors duration-200" />

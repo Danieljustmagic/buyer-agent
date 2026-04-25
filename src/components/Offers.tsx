@@ -131,7 +131,7 @@ export default function Offers() {
 
                 {/* Description */}
                 <p
-                  className={`text-sm leading-relaxed mb-6 ${
+                  className={`text-base leading-relaxed mb-6 ${
                     o.highlighted ? "text-white/75" : "text-text-muted"
                   }`}
                 >
@@ -139,11 +139,11 @@ export default function Offers() {
                 </p>
 
                 {/* Features */}
-                <ul className="space-y-2.5">
+                <ul className="space-y-3">
                   {o.features.map((f) => (
-                    <li key={f} className="flex items-start gap-3 text-sm group/feat cursor-default">
+                    <li key={f} className="flex items-start gap-3 text-base group/feat cursor-default">
                       <span
-                        className={`w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 transition-transform
+                        className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 transition-transform
                           duration-200 group-hover/feat:scale-125 ${
                           o.highlighted ? "bg-accent" : "bg-accent/70"
                         }`}

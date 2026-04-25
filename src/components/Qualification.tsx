@@ -34,7 +34,7 @@ export default function Qualification() {
                 flex items-center justify-center mt-0.5 group-hover:bg-accent/25 transition-colors duration-200">
                 <span className="text-accent text-xs font-black">{i + 1}</span>
               </div>
-              <p className="text-white/85 leading-snug">{c}</p>
+              <p className="text-white/85 text-base leading-snug">{c}</p>
             </div>
           ))}
         </div>

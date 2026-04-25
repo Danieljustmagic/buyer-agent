@@ -46,7 +46,7 @@ export default function Expertise() {
               data-reveal
               data-reveal-delay="120"
             >
-              <p className="text-white/60 text-xs font-semibold uppercase tracking-widest mb-5">
+              <p className="text-white/60 text-sm font-semibold uppercase tracking-widest mb-5">
                 Aujourd&apos;hui, cela nous permet :
               </p>
               <ul className="space-y-4">
@@ -59,7 +59,7 @@ export default function Expertise() {
                   >
                     <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0
                       group-hover/item:scale-125 transition-transform duration-200" />
-                    <span className="text-white/80 text-sm leading-relaxed
+                    <span className="text-white/80 text-base leading-relaxed
                       group-hover/item:text-white transition-colors duration-200">{a}</span>
                   </li>
                 ))}

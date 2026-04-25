@@ -81,7 +81,7 @@ export default function ROI() {
             data-reveal
             data-reveal-delay="160"
           >
-            <p className="text-white/55 text-xs font-semibold uppercase tracking-widest mb-5">
+            <p className="text-white/55 text-sm font-semibold uppercase tracking-widest mb-5">
               Sur un bien entre 200 000 € et 400 000 €
             </p>
             <ul className="space-y-5">
@@ -93,9 +93,9 @@ export default function ROI() {
                   data-reveal
                   data-reveal-delay={160 + i * 80}
                 >
-                  <p className="text-white font-semibold text-sm
+                  <p className="text-white font-semibold text-base
                     group-hover/item:text-accent transition-colors duration-200">{f.label}</p>
-                  <p className="text-white/65 text-xs mt-1 leading-relaxed">{f.detail}</p>
+                  <p className="text-white/65 text-sm mt-1 leading-relaxed">{f.detail}</p>
                 </li>
               ))}
             </ul>
@@ -108,14 +108,14 @@ export default function ROI() {
           data-reveal
           data-reveal-delay="100"
         >
-          <p className="text-white/70 text-sm leading-relaxed mb-5">
+          <p className="text-white/70 text-base leading-relaxed mb-5">
             Mais au-delà de l&apos;aspect financier, il y a aussi ce que l&apos;on ne chiffre pas :
           </p>
           <ul className="grid sm:grid-cols-2 gap-3">
             {intangible.map((item, i) => (
               <li
                 key={item}
-                className="flex items-start gap-3 text-white/70 text-sm group/item
+                className="flex items-start gap-3 text-white/70 text-base group/item
                   hover:text-white/90 transition-colors duration-200 cursor-default"
                 data-reveal
                 data-reveal-delay={100 + i * 70}
@@ -150,10 +150,10 @@ export default function ROI() {
           data-reveal
           data-reveal-delay="200"
         >
-          <p className="text-white/65 text-sm leading-relaxed mb-2">
+          <p className="text-white/65 text-base leading-relaxed mb-2">
             L&apos;enjeu n&apos;est pas le coût de l&apos;accompagnement.
           </p>
-          <p className="text-accent font-bold text-lg leading-snug font-serif italic">
+          <p className="text-accent font-bold text-xl leading-snug font-serif italic">
             &ldquo;L&apos;enjeu, c&apos;est ce que peut vous coûter une mauvaise décision… ou l&apos;absence de décision.&rdquo;
           </p>
         </div>
