@@ -135,7 +135,7 @@ export default function Offers() {
               </p>
 
               {/* Features */}
-              <ul className="space-y-2.5 mb-8 flex-1">
+              <ul className="space-y-2.5 mb-8 flex-1 min-h-0">
                 {o.features.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-sm group/feat cursor-default">
                     <span
@@ -160,7 +160,7 @@ export default function Offers() {
               {/* CTA */}
               <a
                 href="#contact"
-                className={`inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3
+                className={`mt-auto flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4
                   font-bold text-sm transition-all duration-200 hover:-translate-y-px ${
                     o.highlighted
                       ? "bg-accent text-night hover:bg-accent-hover"
