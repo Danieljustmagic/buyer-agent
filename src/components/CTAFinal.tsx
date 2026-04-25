@@ -24,12 +24,19 @@ export default function CTAFinal() {
 
             {/* Titre */}
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4"
+              className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-3"
               data-reveal
               data-reveal-delay="80"
             >
               Faisons le point sur votre projet.
             </h2>
+            <p
+              className="text-accent/70 text-xs font-semibold tracking-[0.18em] uppercase mb-6"
+              data-reveal
+              data-reveal-delay="130"
+            >
+              Le bon cap pour votre projet
+            </p>
 
             {/* Punchline serif */}
             <p

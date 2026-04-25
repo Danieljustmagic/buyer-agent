@@ -32,7 +32,7 @@ export default function Hero() {
           <div className="flex items-center gap-3 mb-10" data-reveal>
             <div className="w-6 h-px bg-accent" />
             <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
-              Accompagnement acheteur immobilier
+              KAP · Accompagnement acheteur immobilier
             </span>
           </div>
 
