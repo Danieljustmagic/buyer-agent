@@ -10,7 +10,7 @@ export default function Footer() {
 
           {/* Identité */}
           <div>
-            <Logo light withTagline />
+            <Logo height={80} />
             <p className="text-white/35 text-sm mt-5 max-w-xs leading-relaxed">
               Accompagnement stratégique pour l&apos;achat immobilier.
               Une méthode, une expertise, un cap.
