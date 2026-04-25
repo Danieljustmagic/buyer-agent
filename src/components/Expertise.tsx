@@ -24,7 +24,7 @@ export default function Expertise() {
             </h2>
 
             <p className="text-white/70 text-lg leading-relaxed mb-10">
-              Notre équipe réunit des experts issus du financement, du conseil et de la stratégie immobilière. Ce qui fait la différence ne se voit pas toujours.
+              Notre équipe réunit des experts issus du financement, du conseil et de la stratégie immobilière.
             </p>
 
             {/* Citation */}
