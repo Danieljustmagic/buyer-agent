@@ -65,7 +65,7 @@ export default function Hero() {
             data-reveal
             data-reveal-delay="280"
           >
-            Je vous accompagne pour structurer votre projet, analyser les bonnes opportunités et sécuriser votre achat jusqu&apos;à la signature.
+            Nous vous accompagnons pour structurer votre projet, analyser les bonnes opportunités et sécuriser votre achat jusqu&apos;à la signature.
           </p>
 
           {/* CTA principal */}

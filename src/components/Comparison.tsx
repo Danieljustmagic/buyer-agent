@@ -57,7 +57,7 @@ export default function Comparison() {
             </ul>
           </div>
 
-          {/* Avec moi */}
+          {/* Avec nous */}
           <div
             className="bg-night rounded-2xl p-8 hover:shadow-xl transition-shadow duration-300"
             data-reveal
@@ -65,7 +65,7 @@ export default function Comparison() {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-2 h-2 rounded-full bg-accent" />
-              <h3 className="font-bold text-accent text-sm uppercase tracking-widest">Avec moi</h3>
+              <h3 className="font-bold text-accent text-sm uppercase tracking-widest">Avec nous</h3>
             </div>
             <ul className="space-y-4">
               {withMe.map((item, i) => (

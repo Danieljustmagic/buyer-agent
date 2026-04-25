@@ -1,25 +1,25 @@
 const services = [
   {
     num: "01",
-    title: "On définit un projet ultra précis",
+    title: "Nous définissons ensemble un projet précis",
     items: ["Budget réel", "Critères prioritaires", "Stratégie d'achat"],
     extra: null,
   },
   {
     num: "02",
-    title: "Je vous propose des biens chaque semaine",
+    title: "Nous vous proposons des biens chaque semaine",
     items: ["Sélection ciblée", "Biens cohérents avec votre projet", "Gain de temps considérable"],
     extra: null,
   },
   {
     num: "03",
-    title: "Je vous aide à analyser les biens",
+    title: "Nous vous aidons à analyser les biens",
     items: ["Points forts et points faibles", "Cohérence du prix", "Risques éventuels"],
     extra: null,
   },
   {
     num: "04",
-    title: "Je vous accompagne dans la négociation",
+    title: "Nous vous accompagnons dans la négociation",
     items: ["Posture", "Stratégie", "Timing"],
     extra: {
       label: "Une négociation plus équilibrée",
@@ -27,7 +27,7 @@ const services = [
         "Dans une transaction immobilière, le vendeur est presque toujours représenté par un agent immobilier. L'acheteur, lui, est seul.",
       blocks: [
         {
-          heading: "Lorsque j'interviens à vos côtés, la dynamique change.",
+          heading: "Lorsque nous intervenons à vos côtés, la dynamique change.",
           points: [
             "Vous n'êtes plus seul face à un professionnel",
             "La discussion devient plus fluide",
@@ -49,13 +49,13 @@ const services = [
   },
   {
     num: "05",
-    title: "Je coordonne tout l'écosystème",
+    title: "Nous coordonnons tout l'écosystème",
     items: ["Courtier", "Assurance emprunteur", "Notaire", "Artisans"],
     extra: null,
   },
   {
     num: "06",
-    title: "Je vous accompagne jusqu'à la signature",
+    title: "Nous vous accompagnons jusqu'à la signature",
     items: ["Suivi complet", "Sécurisation des étapes", "Cohérence globale"],
     extra: null,
   },
@@ -70,16 +70,15 @@ export default function Services() {
         <div className="max-w-xl mb-16" data-reveal>
           <div className="flex items-center gap-3 mb-6">
             <div className="w-6 h-px bg-accent" />
-            <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">Ce que je fais concrètement</span>
+            <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">Ce que nous faisons concrètement</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-night leading-tight">
-            Je prends en charge votre parcours d&apos;achat.
+            Nous prenons en charge votre parcours d&apos;achat.
           </h2>
         </div>
 
         {/* Timeline avec ligne de parcours */}
         <div className="relative">
-          {/* Ligne verticale centrale – signature */}
           <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-accent/30 to-transparent hidden md:block" />
 
           <div className="space-y-0">
@@ -90,11 +89,10 @@ export default function Services() {
                 data-reveal
                 data-reveal-delay={i * 90}
               >
-
                 {/* Jalon */}
                 <div className="flex-shrink-0 relative z-10 hidden md:flex flex-col items-center">
                   <div className={`w-3 h-3 rounded-full border-2 mt-2 transition-colors duration-300 ${
-                    i === 0 ? "bg-accent border-accent" : "bg-white border-accent/40 group-hover:border-accent"
+                    i === 0 ? "bg-accent border-accent" : "bg-white border-accent/40"
                   }`} />
                   {i < services.length - 1 && (
                     <div className="w-px flex-1 bg-accent/15 mt-1 min-h-[60px]" />
@@ -112,9 +110,7 @@ export default function Services() {
                           {s.num}
                         </span>
                         <div className="flex-1">
-                          <h3 className="font-bold text-night text-base mb-3">
-                            {s.title}
-                          </h3>
+                          <h3 className="font-bold text-night text-base mb-3">{s.title}</h3>
                           <ul className="flex flex-wrap gap-2">
                             {s.items.map((item) => (
                               <li
@@ -134,20 +130,15 @@ export default function Services() {
                     {/* Bloc étendu — négociation */}
                     {s.extra && (
                       <div className="border-t border-beige-dark bg-white px-6 pb-6 pt-5">
-                        {/* Label */}
                         <div className="flex items-center gap-3 mb-4">
                           <div className="w-4 h-px bg-accent" />
                           <span className="text-accent text-xs font-bold uppercase tracking-widest">
                             {s.extra.label}
                           </span>
                         </div>
-
-                        {/* Intro */}
                         <p className="text-text-muted text-sm leading-relaxed mb-6">
                           {s.extra.intro}
                         </p>
-
-                        {/* Blocs */}
                         <div className="grid sm:grid-cols-2 gap-5">
                           {s.extra.blocks.map((block) => (
                             <div key={block.heading} className="bg-beige rounded-xl p-5 border border-beige-dark
@@ -167,8 +158,6 @@ export default function Services() {
                             </div>
                           ))}
                         </div>
-
-                        {/* Conclusion */}
                         <p className="text-night font-semibold text-sm mt-5 pl-4 border-l-2 border-accent">
                           {s.extra.conclusion}
                         </p>

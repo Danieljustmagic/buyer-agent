@@ -1,4 +1,4 @@
-const myRole = ["La méthode", "Le cadre", "L'analyse", "La stratégie"];
+const ourRole = ["La méthode", "Le cadre", "L'analyse", "La stratégie"];
 const yourRole = ["Vous avancez", "Vous visitez", "Vous ressentez", "Vous décidez"];
 
 export default function Partnership() {
@@ -16,7 +16,7 @@ export default function Partnership() {
               </span>
             </div>
             <h2 className="text-3xl md:text-4xl font-extrabold text-night leading-tight mb-6">
-              Ce que je propose n&apos;est pas une délégation complète.
+              Ce que nous proposons n&apos;est pas une délégation complète.
             </h2>
             <p className="text-text-muted text-lg leading-relaxed mb-8">
               Vous restez acteur de votre projet.
@@ -33,7 +33,7 @@ export default function Partnership() {
           {/* Right — deux colonnes rôles */}
           <div className="grid grid-cols-2 gap-4">
 
-            {/* Moi */}
+            {/* Nous */}
             <div
               className="bg-night rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300"
               data-reveal
@@ -41,10 +41,10 @@ export default function Partnership() {
             >
               <div className="flex items-center gap-2 mb-5">
                 <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                <span className="text-accent text-xs font-bold uppercase tracking-widest">Moi</span>
+                <span className="text-accent text-xs font-bold uppercase tracking-widest">Nous</span>
               </div>
               <ul className="space-y-3">
-                {myRole.map((item) => (
+                {ourRole.map((item) => (
                   <li key={item} className="flex items-center gap-3 text-white/80 text-sm
                     group/item hover:text-white transition-colors duration-200 cursor-default">
                     <span className="w-1 h-1 rounded-full bg-accent/60 flex-shrink-0

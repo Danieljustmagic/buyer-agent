@@ -43,7 +43,7 @@ const offers = [
     price: "À partir de 2 500 €",
     priceNote: "sur mesure",
     description:
-      "Je vous accompagne sur l'ensemble du parcours, de la définition du projet jusqu'à l'acte de vente.",
+      "Nous vous accompagnons sur l'ensemble du parcours, de la définition du projet jusqu'à l'acte de vente.",
     features: [
       "Définition précise du projet",
       "Sélection hebdomadaire de biens",
