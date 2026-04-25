@@ -3,31 +3,61 @@ const services = [
     num: "01",
     title: "On définit un projet ultra précis",
     items: ["Budget réel", "Critères prioritaires", "Stratégie d'achat"],
+    extra: null,
   },
   {
     num: "02",
     title: "Je vous propose des biens chaque semaine",
     items: ["Sélection ciblée", "Biens cohérents avec votre projet", "Gain de temps considérable"],
+    extra: null,
   },
   {
     num: "03",
     title: "Je vous aide à analyser les biens",
     items: ["Points forts et points faibles", "Cohérence du prix", "Risques éventuels"],
+    extra: null,
   },
   {
     num: "04",
     title: "Je vous accompagne dans la négociation",
     items: ["Posture", "Stratégie", "Timing"],
+    extra: {
+      label: "Une négociation plus équilibrée",
+      intro:
+        "Dans une transaction immobilière, le vendeur est presque toujours représenté par un agent immobilier. L'acheteur, lui, est seul.",
+      blocks: [
+        {
+          heading: "Lorsque j'interviens à vos côtés, la dynamique change.",
+          points: [
+            "Vous n'êtes plus seul face à un professionnel",
+            "La discussion devient plus fluide",
+            "Les échanges sont plus structurés",
+            "Les enjeux sont mieux compris",
+          ],
+        },
+        {
+          heading: "Le fait de dialoguer entre professionnels permet :",
+          points: [
+            "D'éviter les incompréhensions",
+            "De poser les bons arguments",
+            "De mieux défendre votre position",
+          ],
+        },
+      ],
+      conclusion: "Cela rééquilibre la relation et favorise une négociation plus juste.",
+    },
   },
   {
     num: "05",
     title: "Je coordonne tout l'écosystème",
     items: ["Courtier", "Assurance emprunteur", "Notaire", "Artisans"],
+    extra: null,
   },
   {
     num: "06",
     title: "Je vous accompagne jusqu'à la signature",
     items: ["Suivi complet", "Sécurisation des étapes", "Cohérence globale"],
+    extra: null,
   },
 ];
 
@@ -68,27 +98,71 @@ export default function Services() {
 
                 {/* Card */}
                 <div className={`flex-1 pb-10 ${i === services.length - 1 ? "pb-0" : ""}`}>
-                  <div className="group bg-beige hover:bg-white rounded-2xl p-6 border border-beige-dark hover:border-accent/20 hover:shadow-lg transition-all duration-300">
-                    <div className="flex items-start gap-4">
-                      <span className="text-xs font-black text-accent/50 tracking-widest mt-1 flex-shrink-0">
-                        {s.num}
-                      </span>
-                      <div>
-                        <h3 className="font-bold text-night text-base mb-3 group-hover:text-night transition-colors">
-                          {s.title}
-                        </h3>
-                        <ul className="flex flex-wrap gap-2">
-                          {s.items.map((item) => (
-                            <li
-                              key={item}
-                              className="text-xs text-text-muted bg-white border border-beige-dark rounded-full px-3 py-1"
-                            >
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
+                  <div className="group bg-beige hover:bg-white rounded-2xl border border-beige-dark hover:border-accent/20 hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div className="p-6">
+                      <div className="flex items-start gap-4">
+                        <span className="text-xs font-black text-accent/50 tracking-widest mt-1 flex-shrink-0">
+                          {s.num}
+                        </span>
+                        <div className="flex-1">
+                          <h3 className="font-bold text-night text-base mb-3">
+                            {s.title}
+                          </h3>
+                          <ul className="flex flex-wrap gap-2">
+                            {s.items.map((item) => (
+                              <li
+                                key={item}
+                                className="text-xs text-text-muted bg-white border border-beige-dark rounded-full px-3 py-1"
+                              >
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     </div>
+
+                    {/* Bloc étendu — négociation */}
+                    {s.extra && (
+                      <div className="border-t border-beige-dark bg-white px-6 pb-6 pt-5">
+                        {/* Label */}
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-4 h-px bg-accent" />
+                          <span className="text-accent text-xs font-bold uppercase tracking-widest">
+                            {s.extra.label}
+                          </span>
+                        </div>
+
+                        {/* Intro */}
+                        <p className="text-text-muted text-sm leading-relaxed mb-6">
+                          {s.extra.intro}
+                        </p>
+
+                        {/* Blocs */}
+                        <div className="grid sm:grid-cols-2 gap-5">
+                          {s.extra.blocks.map((block) => (
+                            <div key={block.heading} className="bg-beige rounded-xl p-5 border border-beige-dark">
+                              <p className="text-night text-xs font-semibold mb-3 leading-snug">
+                                {block.heading}
+                              </p>
+                              <ul className="space-y-2">
+                                {block.points.map((pt) => (
+                                  <li key={pt} className="flex items-start gap-2 text-xs text-text-muted">
+                                    <span className="w-1 h-1 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+                                    {pt}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Conclusion */}
+                        <p className="text-night font-semibold text-sm mt-5 pl-4 border-l-2 border-accent">
+                          {s.extra.conclusion}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
