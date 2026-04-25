@@ -66,7 +66,7 @@ export default function CTAFinal() {
                   transition-all duration-200 shadow-lg shadow-accent/20 hover:-translate-y-0.5"
               >
                 <Calendar className="w-4 h-4" />
-                Faire le point sur mon projet (30 min)
+                Clarifier mon projet (30 min)
               </a>
               <p className="text-white/60 text-sm leading-relaxed max-w-sm">
                 Un premier échange pour comprendre votre situation et déterminer la meilleure suite à donner.

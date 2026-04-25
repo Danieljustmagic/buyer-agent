@@ -12,7 +12,7 @@ export default function Navbar() {
           className="inline-flex items-center gap-2 bg-accent text-night text-sm font-bold px-5 py-2.5 rounded-xl
             hover:bg-accent-hover transition-all duration-200 hover:-translate-y-px"
         >
-          Faire le point (30 min)
+          Clarifier mon projet (30 min)
         </a>
       </div>
     </header>

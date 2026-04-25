@@ -96,7 +96,7 @@ export default function Hero() {
                 px-8 py-4 rounded-xl text-sm tracking-wide hover:bg-accent-hover
                 transition-all duration-200 shadow-lg shadow-accent/20 hover:-translate-y-0.5"
             >
-              Faire le point sur mon projet (30 min)
+              Clarifier mon projet (30 min)
               <ArrowRight className="w-4 h-4" />
             </a>
             <p

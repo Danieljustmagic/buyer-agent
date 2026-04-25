@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 const offers = [
   {
     tag: "Gratuit",
-    title: "Faire le point sur mon projet",
+    title: "Clarifier mon projet",
     duration: "30 min",
     price: "Offert",
     priceNote: "sans engagement",
@@ -16,7 +16,7 @@ const offers = [
       "Définir la meilleure suite",
     ],
     highlighted: false,
-    cta: "Faire le point sur mon projet (30 min)",
+    cta: "Clarifier mon projet (30 min)",
   },
   {
     tag: "Session",
