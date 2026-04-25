@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import Services from "@/components/Services";
 import Partnership from "@/components/Partnership";
+import Expertise from "@/components/Expertise";
 import ROI from "@/components/ROI";
 import Comparison from "@/components/Comparison";
 import Offers from "@/components/Offers";
@@ -19,6 +20,7 @@ export default function Home() {
         <Problem />
         <Services />
         <Partnership />
+        <Expertise />
         <ROI />
         <Comparison />
         <Offers />
