@@ -58,7 +58,7 @@ export default function CTAFinal() {
             </p>
 
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4" data-reveal data-reveal-delay="300">
+            <div className="flex flex-col items-start gap-3" data-reveal data-reveal-delay="300">
               <a
                 href="#"
                 className="inline-flex items-center justify-center gap-3 bg-accent text-night
@@ -66,24 +66,30 @@ export default function CTAFinal() {
                   transition-all duration-200 shadow-lg shadow-accent/20 hover:-translate-y-0.5"
               >
                 <Calendar className="w-4 h-4" />
-                Réserver mon rendez-vous (30 min)
+                Faire le point sur mon projet (30 min)
               </a>
-              <a
-                href="mailto:contact@buyer-agent.fr"
-                className="inline-flex items-center justify-center gap-2 text-white/65
-                  hover:text-white px-6 py-4 text-sm transition-colors duration-200"
-              >
-                Écrire directement <ArrowRight className="w-4 h-4" />
-              </a>
+              <p className="text-white/60 text-sm leading-relaxed max-w-sm">
+                Un premier échange pour comprendre votre situation et déterminer la meilleure suite à donner.
+              </p>
             </div>
 
-            <p
-              className="text-white/45 text-xs mt-6"
+            <div
+              className="flex items-center gap-4 mt-4"
               data-reveal
               data-reveal-delay="380"
             >
-              Offert · 30 minutes · Sans engagement
-            </p>
+              <a
+                href="mailto:contact@buyer-agent.fr"
+                className="inline-flex items-center gap-2 text-white/50
+                  hover:text-white text-sm transition-colors duration-200"
+              >
+                Écrire directement <ArrowRight className="w-4 h-4" />
+              </a>
+              <span className="text-white/20 text-xs">·</span>
+              <p className="text-white/35 text-xs">
+                Offert · Sans engagement
+              </p>
+            </div>
           </div>
         </div>
       </div>

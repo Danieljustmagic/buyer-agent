@@ -86,7 +86,7 @@ export default function Hero() {
 
           {/* CTA principal */}
           <div
-            className="flex flex-col sm:flex-row gap-4 items-start"
+            className="flex flex-col items-start gap-3"
             data-reveal
             data-reveal-delay="520"
           >
@@ -96,19 +96,17 @@ export default function Hero() {
                 px-8 py-4 rounded-xl text-sm tracking-wide hover:bg-accent-hover
                 transition-all duration-200 shadow-lg shadow-accent/20 hover:-translate-y-0.5"
             >
-              Faire le point sur mon projet
+              Faire le point sur mon projet (30 min)
               <ArrowRight className="w-4 h-4" />
             </a>
+            <p
+              className="text-white/55 text-sm leading-relaxed max-w-sm"
+              data-reveal
+              data-reveal-delay="580"
+            >
+              Un premier échange pour comprendre votre situation et déterminer la meilleure suite à donner.
+            </p>
           </div>
-
-          {/* Mention RDV gratuit */}
-          <p
-            className="text-white/50 text-sm mt-4"
-            data-reveal
-            data-reveal-delay="580"
-          >
-            Premier échange de 30 min — offert, sans engagement
-          </p>
         </div>
 
         {/* Bas de page – chiffres */}

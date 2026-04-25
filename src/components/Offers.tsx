@@ -16,7 +16,7 @@ const offers = [
       "Définir la meilleure suite",
     ],
     highlighted: false,
-    cta: "Réserver mon rendez-vous",
+    cta: "Faire le point sur mon projet (30 min)",
   },
   {
     tag: "Session",
