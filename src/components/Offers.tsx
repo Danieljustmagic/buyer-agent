@@ -77,7 +77,7 @@ export default function Offers() {
           {offers.map((o, i) => (
             <div
               key={o.title}
-              className={`rounded-2xl p-8 flex flex-col h-full border transition-all duration-300 ${
+              className={`rounded-2xl p-8 pb-24 flex flex-col relative border transition-all duration-300 ${
                 o.highlighted
                   ? "bg-night border-night shadow-2xl shadow-night/30 hover:-translate-y-1"
                   : "bg-beige border-beige-dark hover:border-accent/30 hover:shadow-lg hover:-translate-y-0.5"
@@ -157,8 +157,8 @@ export default function Offers() {
                 ))}
               </ul>
 
-              {/* CTA — mt-auto pousse le bouton en bas quelle que soit la hauteur */}
-              <div className="mt-auto pt-8">
+              {/* CTA — ancré en absolu en bas de chaque carte */}
+              <div className="absolute bottom-8 left-8 right-8">
                 <a
                   href="#contact"
                   className={`flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4
