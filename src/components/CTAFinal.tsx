@@ -2,7 +2,6 @@
 
 import { ArrowRight, Calendar } from "lucide-react";
 import { useState } from "react";
-import Logo from "./Logo";
 
 export default function CTAFinal() {
   const [submitted, setSubmitted] = useState(false);
@@ -47,9 +46,19 @@ export default function CTAFinal() {
 
 
           {/* Logo cachet */}
-          <div className="relative mb-10" style={{ mixBlendMode: "screen", opacity: 0.55 }}>
-            <Logo height={40} />
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/image.png"
+            alt="KAP"
+            style={{
+              height: "44px",
+              width: "auto",
+              display: "block",
+              marginBottom: "2.5rem",
+              opacity: 0.6,
+              filter: "brightness(0) invert(1)",
+            }}
+          />
 
           <div className="relative grid lg:grid-cols-2 gap-14 items-start">
 

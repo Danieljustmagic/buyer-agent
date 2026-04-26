@@ -1,5 +1,3 @@
-import Logo from "./Logo";
-
 export default function Founder() {
   return (
     <section className="bg-night section-pad overflow-hidden">
@@ -103,9 +101,19 @@ export default function Founder() {
               <p className="text-accent/70 text-sm mt-1 tracking-wide">
                 Fondateur — KAP
               </p>
-              <div className="mt-6" style={{ mixBlendMode: "screen", opacity: 0.6 }}>
-                <Logo height={52} />
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/image.png"
+                alt="KAP"
+                style={{
+                  height: "52px",
+                  width: "auto",
+                  display: "block",
+                  marginTop: "1.5rem",
+                  opacity: 0.75,
+                  filter: "brightness(0) invert(1)",
+                }}
+              />
             </div>
           </div>
 
