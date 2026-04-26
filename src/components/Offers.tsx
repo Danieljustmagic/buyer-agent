@@ -126,7 +126,7 @@ export default function Offers() {
                     font-bold text-sm bg-accent text-night hover:bg-accent-hover
                     transition-all duration-200 hover:-translate-y-px"
                 >
-                  Démarrer l&apos;accompagnement <ArrowRight className="w-3.5 h-3.5" />
+                  Échanger sur mon projet <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>
             </div>
