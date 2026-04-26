@@ -43,30 +43,21 @@ export default function Hero() {
             data-reveal
             data-reveal-delay="80"
           >
-            Vous voulez acheter
+            L&apos;accompagnement immobilier
             <br />
-            un bien immobilier.
+            <span className="text-accent">100 % dédié à l&apos;acheteur.</span>
           </h1>
 
           {/* Ligne de séparation */}
           <div className="w-8 h-0.5 bg-accent/40 mb-8" data-reveal data-reveal-delay="160" />
 
-          {/* Tension */}
+          {/* Slogan */}
           <p
-            className="text-accent text-xl font-semibold mb-6 leading-snug"
+            className="text-white/80 text-xl leading-relaxed mb-12"
             data-reveal
             data-reveal-delay="200"
           >
-            Mais au moment de décider, tout devient plus complexe.
-          </p>
-
-          {/* Corps */}
-          <p
-            className="text-white/75 text-lg leading-relaxed mb-12"
-            data-reveal
-            data-reveal-delay="280"
-          >
-            Notre rôle est de vous accompagner tout au long de votre projet, de l&apos;analyse des opportunités à la sécurisation de votre achat jusqu&apos;à sa signature.
+            De la définition de votre projet jusqu&apos;à la signature, nous défendons exclusivement vos intérêts.
           </p>
 
           {/* CTA principal */}
