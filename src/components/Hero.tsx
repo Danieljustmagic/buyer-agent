@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import HeroStats from "./HeroStats";
 
 export default function Hero() {
@@ -66,7 +66,7 @@ export default function Hero() {
             data-reveal
             data-reveal-delay="280"
           >
-            Nous vous accompagnons pour structurer votre projet, analyser les bonnes opportunités et sécuriser votre achat jusqu&apos;à la signature.
+            Notre rôle est de vous accompagner tout au long de votre projet, de l&apos;analyse des opportunités à la sécurisation de votre achat jusqu&apos;à sa signature.
           </p>
 
           {/* CTA principal */}
@@ -96,6 +96,12 @@ export default function Hero() {
 
         {/* Bas de page – chiffres animés */}
         <HeroStats />
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-40 animate-bounce">
+          <span className="text-white/60 text-xs tracking-widest uppercase font-medium">Découvrir</span>
+          <ChevronDown className="w-5 h-5 text-white/60" />
+        </div>
       </div>
     </section>
   );

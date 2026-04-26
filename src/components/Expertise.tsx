@@ -24,16 +24,8 @@ export default function Expertise() {
             </h2>
 
             <p className="text-white/70 text-lg leading-relaxed mb-10">
-              Notre équipe réunit des experts issus du financement, du conseil et de la stratégie immobilière.
+              Financement, négociation, stratégie d&apos;acquisition — une expertise réunie pour défendre votre intérêt à chaque étape.
             </p>
-
-            {/* Citation */}
-            <div className="border-l-2 border-accent pl-6 space-y-4">
-              <p className="text-white/80 text-base leading-relaxed">
-                C&apos;est ce qui nous permet d&apos;anticiper les obstacles,
-                <span className="text-white"> de structurer votre démarche et de défendre votre intérêt à chaque étape.</span>
-              </p>
-            </div>
           </div>
 
           {/* Right */}

@@ -29,27 +29,14 @@ export default function Genesis() {
 
         {/* La conviction */}
         <blockquote
-          className="border-l-2 border-accent pl-8 mb-12"
+          className="border-l-2 border-accent pl-8"
           data-reveal
           data-reveal-delay="220"
         >
           <p className="font-serif italic text-2xl md:text-3xl text-white leading-snug">
-            &ldquo;Pourtant, acheter un bien, ce n&apos;est pas signer un contrat.
-            C&apos;est un moment de vie — une étape essentielle pour construire l&apos;avenir.&rdquo;
+            &ldquo;Acheter un bien, c&apos;est prendre la décision financière la plus importante de sa vie. Elle mérite d&apos;être prise avec quelqu&apos;un dans son camp.&rdquo;
           </p>
         </blockquote>
-
-        {/* La conclusion */}
-        <p
-          className="text-white/70 text-lg leading-relaxed"
-          data-reveal
-          data-reveal-delay="300"
-        >
-          KAP est né d&apos;une conviction simple : ceux qui s&apos;engagent dans ce projet
-          méritent d&apos;être{" "}
-          <span className="text-white font-semibold">défendus, guidés et représentés</span>
-          {" "}— au même titre que la partie en face.
-        </p>
 
       </div>
     </section>

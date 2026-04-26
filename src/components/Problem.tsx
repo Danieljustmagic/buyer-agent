@@ -24,7 +24,7 @@ export default function Problem() {
               data-reveal
               data-reveal-delay="80"
             >
-              Acheter aujourd&apos;hui, c&apos;est devoir tout gérer seul.
+              Acheter aujourd&apos;hui implique de gérer soi-même l&apos;ensemble du processus.
             </h2>
             <p
               className="text-text-muted text-lg leading-relaxed mb-8"
@@ -64,7 +64,7 @@ export default function Problem() {
               </p>
               <blockquote className="border-l-2 border-accent pl-6">
                 <p className="font-serif italic text-xl text-night leading-relaxed">
-                  &ldquo;Vous prenez une décision importante… tout en gérant seul toute la complexité.&rdquo;
+                  &ldquo;Vous engagez souvent la plus grande décision financière de votre vie… sans personne pour défendre vos intérêts.&rdquo;
                 </p>
               </blockquote>
             </div>

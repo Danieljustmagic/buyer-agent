@@ -63,28 +63,29 @@ export default function Founder() {
               data-reveal
               data-reveal-delay="130"
             >
-              Trois côtés de la table.<br />
-              Un seul camp.
+              Ce que j&apos;ai vu de l&apos;intérieur<br />
+              a changé ma façon d&apos;accompagner.
             </h2>
 
             {/* Corps */}
             <div className="space-y-5" data-reveal data-reveal-delay="180">
               <p className="text-white/65 text-lg leading-relaxed">
-                Après 25 ans dans le secteur bancaire, j&apos;ai eu une conviction
-                qui ne m&apos;a plus quitté : dans toute transaction immobilière,
-                tout le monde est représenté — sauf l&apos;acheteur.
+                25 ans dans le secteur bancaire. Des centaines de dossiers
+                de financement, de clients accompagnés dans leur projet d&apos;acquisition.
+                J&apos;ai vu toutes les configurations, tous les profils — et tous les moments
+                où une mauvaise décision aurait pu tout compromettre.
               </p>
               <p className="text-white/65 text-lg leading-relaxed">
-                Le vendeur a son agent. La banque a ses intérêts. Le notaire
-                instrumente l&apos;acte. L&apos;acheteur, lui, navigue seul dans
-                un environnement que les autres connaissent mieux que lui.
+                J&apos;ai aussi exercé comme agent immobilier. J&apos;ai vu, de
+                l&apos;autre côté de la table, comment une transaction se
+                construit — et pour qui elle se construit. Le vendeur est défendu.
+                La banque protège ses marges. Le notaire instrumente l&apos;acte.
               </p>
               <p className="text-white/65 text-lg leading-relaxed">
-                J&apos;ai exercé comme agent immobilier. J&apos;ai vu de
-                l&apos;intérieur comment les transactions se construisent du côté
-                vendeur. Quand on a vu le jeu de l&apos;intérieur, on ne peut
-                plus regarder un acheteur avancer seul sans vouloir changer
-                quelque chose.{" "}
+                L&apos;acheteur, lui, avance seul dans un environnement que
+                les autres maîtrisent mieux que lui. Quand on a vu le jeu
+                de l&apos;intérieur, on ne peut plus regarder ça sans vouloir
+                changer quelque chose.{" "}
                 <span className="text-white font-medium">
                   C&apos;est pour ça que KAP existe.
                 </span>
