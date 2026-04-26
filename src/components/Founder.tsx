@@ -1,6 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-import Logo from "./Logo";
-
 export default function Founder() {
   return (
     <section className="bg-night section-pad overflow-hidden">
@@ -104,9 +101,6 @@ export default function Founder() {
               <p className="text-accent/70 text-sm mt-1 tracking-wide">
                 Fondateur — KAP
               </p>
-              <div className="mt-6" style={{ mixBlendMode: "screen", opacity: 0.6 }}>
-                <Logo height={52} />
-              </div>
             </div>
           </div>
 
