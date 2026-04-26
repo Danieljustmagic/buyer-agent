@@ -1,21 +1,24 @@
-const comparisons = [
+const levers = [
   {
-    alone: "Vous négociez seul, sans données de marché, sans stratégie d'approche.",
-    accompanied: "Négociation préparée, argumentée, au bon moment — sur la base d'une analyse réelle du bien.",
-    gain: "3 à 8 % sur le prix",
-    example: "Soit 9 000 € à 24 000 € économisés sur un bien à 300 000 €",
+    gain: "+ 9 000 €",
+    gainTo: "à 24 000 €",
+    label: "Négociation",
+    alone: "Vous négociez seul, sans données ni stratégie",
+    kap: "Offre construite sur l'analyse réelle du marché",
   },
   {
-    alone: "Vous acceptez l'offre de votre banque habituelle, faute de comparatif.",
-    accompanied: "Financement structuré, mis en concurrence, optimisé sur la durée et le taux.",
-    gain: "0,2 à 0,5 % de taux",
-    example: "Soit 8 000 € à 20 000 € d'intérêts en moins sur 20 ans",
+    gain: "+ 8 000 €",
+    gainTo: "à 20 000 €",
+    label: "Financement",
+    alone: "Vous acceptez le taux de votre banque habituelle",
+    kap: "Crédit mis en concurrence, taux et durée optimisés",
   },
   {
-    alone: "Vous signez l'assurance emprunteur proposée par la banque sans la comparer.",
-    accompanied: "Délégation d'assurance négociée selon votre profil.",
-    gain: "0,2 à 0,4 % du capital",
-    example: "Soit 5 000 € à 12 000 € d'économies sur la durée du prêt",
+    gain: "+ 5 000 €",
+    gainTo: "à 12 000 €",
+    label: "Assurance",
+    alone: "Vous signez l'assurance de votre banque sans comparer",
+    kap: "Délégation d'assurance négociée selon votre profil",
   },
 ];
 
@@ -24,106 +27,97 @@ export default function ROI() {
     <section className="bg-night section-pad">
       <div className="container-main">
 
-        {/* Header */}
-        <div className="max-w-2xl mb-16" data-reveal>
+        {/* Header + Grand chiffre */}
+        <div className="mb-16" data-reveal>
           <div className="flex items-center gap-3 mb-8">
             <div className="w-6 h-px bg-accent" />
             <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
               Ce que vous gagnez concrètement
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-6">
-            Seul ou accompagné — la différence se chiffre.
-          </h2>
-          <p className="text-white/70 text-lg leading-relaxed">
-            Sur un projet immobilier à 300 000 €, l&apos;écart entre une acquisition mal structurée et une acquisition bien accompagnée peut dépasser{" "}
-            <span className="text-white font-semibold">40 000 € sur la durée du prêt.</span>
+
+          <p className="text-white/60 text-lg leading-relaxed mb-3">
+            Sur un bien à 300 000 €, un acheteur accompagné économise en moyenne
+          </p>
+
+          {/* Chiffre héro */}
+          <div className="flex items-baseline gap-4 mb-4">
+            <span className="text-accent font-black text-6xl md:text-7xl tracking-tight leading-none">
+              + 22 000 €
+            </span>
+            <div>
+              <span className="text-white/50 text-xl font-semibold">à</span>
+              <span className="text-white font-black text-3xl md:text-4xl ml-2">56 000 €</span>
+            </div>
+          </div>
+
+          <p className="text-white/40 text-sm tracking-wide">
+            Négociation · Financement · Assurance emprunteur · Voici comment ↓
           </p>
         </div>
 
-        {/* Tableau comparatif */}
-        <div className="space-y-4 mb-10">
-          {comparisons.map((c, i) => (
+        {/* 3 leviers */}
+        <div className="grid md:grid-cols-3 gap-4 mb-12">
+          {levers.map((l, i) => (
             <div
-              key={i}
-              className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden
-                hover:border-white/20 transition-all duration-300"
+              key={l.label}
+              className="bg-white/5 border border-white/10 rounded-2xl p-6
+                hover:bg-white/8 hover:border-accent/20 transition-all duration-300"
               data-reveal
-              data-reveal-delay={80 + i * 100}
+              data-reveal-delay={i * 100}
             >
-              {/* Gain en vedette */}
-              <div className="flex items-center justify-between px-6 py-4 border-b border-white/8">
-                <span className="text-accent font-black text-lg tracking-tight">+ {c.gain}</span>
-                <span className="text-white/50 text-sm italic">{c.example}</span>
+              {/* Gain */}
+              <div className="mb-5">
+                <span className="text-accent font-black text-3xl tracking-tight">{l.gain}</span>
+                <span className="text-white/40 text-base ml-2">à {l.gainTo.replace("à ", "")}</span>
               </div>
 
-              {/* Avant / Après */}
-              <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/8">
-                <div className="px-6 py-5">
-                  <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-2">
-                    Sans accompagnement
-                  </p>
-                  <p className="text-white/65 text-base leading-relaxed">{c.alone}</p>
-                </div>
-                <div className="px-6 py-5 bg-accent/5">
-                  <p className="text-accent text-xs font-semibold uppercase tracking-widest mb-2">
-                    Avec KAP
-                  </p>
-                  <p className="text-white/85 text-base leading-relaxed">{c.accompanied}</p>
-                </div>
+              {/* Label */}
+              <p className="text-white font-bold text-sm uppercase tracking-widest mb-5">
+                {l.label}
+              </p>
+
+              {/* Séparateur */}
+              <div className="border-t border-white/8 mb-5" />
+
+              {/* Sans */}
+              <div className="flex items-start gap-2.5 mb-3">
+                <span className="text-red-400/70 text-sm mt-0.5 flex-shrink-0">✕</span>
+                <p className="text-white/45 text-sm leading-snug">{l.alone}</p>
+              </div>
+
+              {/* Avec KAP */}
+              <div className="flex items-start gap-2.5">
+                <span className="text-accent text-sm mt-0.5 flex-shrink-0">✓</span>
+                <p className="text-white/85 text-sm leading-snug">{l.kap}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Total visuel */}
+        {/* Intangibles */}
         <div
-          className="bg-accent/10 border border-accent/25 rounded-2xl p-8 mb-6
-            hover:bg-accent/15 hover:border-accent/35 transition-all duration-300"
+          className="border-t border-white/8 pt-10"
           data-reveal
           data-reveal-delay="200"
         >
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div>
-              <p className="text-white/60 text-sm uppercase tracking-widest font-semibold mb-2">
-                Gain potentiel total sur un bien à 300 000 €
-              </p>
-              <p className="text-accent font-black text-4xl md:text-5xl tracking-tight">
-                + 20 000 €<span className="text-accent/60 text-2xl"> à</span> 56 000 €
-              </p>
-              <p className="text-white/50 text-sm mt-2">
-                Négociation + optimisation du financement + assurance emprunteur
-              </p>
-            </div>
-            <div className="md:text-right">
-              <p className="text-white/40 text-xs uppercase tracking-widest font-semibold mb-1">
-                Investissement dans l&apos;accompagnement
-              </p>
-              <p className="text-white font-bold text-xl">Nettement inférieur</p>
-              <p className="text-white/50 text-sm mt-1">au gain qu&apos;il génère</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Ce qu'on ne chiffre pas */}
-        <div
-          className="bg-white/5 border border-white/8 rounded-2xl p-6"
-          data-reveal
-          data-reveal-delay="250"
-        >
-          <p className="text-white/55 text-sm font-semibold uppercase tracking-widest mb-4">
-            Et au-delà des chiffres
+          <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-6">
+            Et ce qu'on ne peut pas chiffrer
           </p>
-          <div className="grid sm:grid-cols-2 gap-3">
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              "Des mois de recherche gagnés",
-              "Des visites ciblées, pas au hasard",
-              "Zéro doute au moment de signer",
-              "Une décision prise en confiance",
+              { icon: "⏱", label: "Des mois de recherche gagnés" },
+              { icon: "🎯", label: "Des visites ciblées, pas au hasard" },
+              { icon: "✍️", label: "Zéro doute au moment de signer" },
+              { icon: "🧭", label: "Une décision prise en confiance" },
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-accent/60 mt-2 flex-shrink-0" />
-                <p className="text-white/70 text-base">{item}</p>
+              <div
+                key={item.label}
+                className="bg-white/4 rounded-xl px-5 py-4 flex items-center gap-3
+                  hover:bg-white/8 transition-colors duration-200"
+              >
+                <span className="text-xl flex-shrink-0">{item.icon}</span>
+                <p className="text-white/65 text-sm leading-snug">{item.label}</p>
               </div>
             ))}
           </div>
