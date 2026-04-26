@@ -41,14 +41,12 @@ export default function ROI() {
           </p>
 
           {/* Chiffre héro */}
-          <div className="flex items-baseline gap-4 mb-4">
-            <span className="text-accent font-black text-6xl md:text-7xl tracking-tight leading-none">
+          <div className="flex items-baseline gap-3 mb-4">
+            <span className="text-accent font-black text-5xl md:text-6xl tracking-tight leading-none">
               + 22 000 €
             </span>
-            <div>
-              <span className="text-white/50 text-xl font-semibold">à</span>
-              <span className="text-white font-black text-3xl md:text-4xl ml-2">56 000 €</span>
-            </div>
+            <span className="text-white/40 text-2xl font-light">—</span>
+            <span className="text-white font-black text-5xl md:text-6xl tracking-tight leading-none">56 000 €</span>
           </div>
 
           <p className="text-white/40 text-sm tracking-wide">
@@ -106,20 +104,19 @@ export default function ROI() {
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { icon: "⏱", label: "Des mois de recherche gagnés" },
-              { icon: "🎯", label: "Des visites ciblées, pas au hasard" },
-              { icon: "✍️", label: "Zéro doute au moment de signer" },
-              { icon: "🧭", label: "Une décision prise en confiance" },
+              "Des mois de recherche gagnés",
+              "Des visites ciblées, pas au hasard",
+              "Zéro doute au moment de signer",
+              "Une décision prise en confiance",
             ].map((item) => (
               <div
-                key={item.label}
-                className="bg-white/4 rounded-xl px-5 py-4 flex items-center gap-3
-                  hover:bg-white/8 transition-colors duration-200"
+                key={item}
+                className="border-l-2 border-accent/30 pl-4 py-1
+                  hover:border-accent transition-colors duration-200"
               >
-                <span className="text-xl flex-shrink-0">{item.icon}</span>
-                <p className="text-white/65 text-sm leading-snug">{item.label}</p>
+                <p className="text-white/65 text-sm leading-snug">{item}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
 
