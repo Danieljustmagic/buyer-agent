@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Logo from "./Logo";
 
 export default function Footer() {
@@ -20,12 +21,18 @@ export default function Footer() {
           {/* Liens / contact */}
           <div className="flex flex-col gap-3 text-right">
             <a
-              href="#contact"
+              href="/#contact"
               className="text-accent text-sm font-semibold hover:text-accent-hover
                 transition-colors duration-200"
             >
               Prendre rendez-vous →
             </a>
+            <Link
+              href="/blog"
+              className="text-white/35 text-sm hover:text-white/60 transition-colors duration-200"
+            >
+              Blog
+            </Link>
             <a
               href="mailto:contact@kap-immo.fr"
               className="text-white/35 text-sm hover:text-white/60 transition-colors duration-200"
