@@ -1,63 +1,5 @@
 import { ArrowRight } from "lucide-react";
 
-const offers = [
-  {
-    tag: "Gratuit",
-    title: "Clarifier mon projet",
-    duration: "30 min",
-    price: "Offert",
-    priceNote: "sans engagement",
-    description:
-      "Un premier échange pour comprendre votre situation et déterminer la meilleure suite à donner.",
-    features: [
-      "Comprendre votre projet",
-      "Identifier vos enjeux",
-      "Vérifier la faisabilité",
-      "Définir la meilleure suite",
-    ],
-    highlighted: false,
-    cta: "Clarifier mon projet (30 min)",
-  },
-  {
-    tag: "Session",
-    title: "Session de Décision Immobilière",
-    duration: "Travail approfondi",
-    price: "490 €",
-    priceNote: "session unique",
-    description:
-      "Un travail approfondi pour cadrer complètement votre projet et construire une stratégie d'achat claire.",
-    features: [
-      "Cadrer complètement votre projet",
-      "Définir des critères précis",
-      "Construire une stratégie d'achat",
-      "Valider les options",
-      "Établir un plan d'action clair",
-    ],
-    highlighted: true,
-    cta: "Démarrer la session",
-  },
-  {
-    tag: "Complet",
-    title: "Accompagnement jusqu'à la signature",
-    duration: "Durée de votre projet",
-    price: "À partir de 2 500 €",
-    priceNote: "sur mesure",
-    description:
-      "Nous vous accompagnons sur l'ensemble du parcours, de la définition du projet jusqu'à l'acte de vente.",
-    features: [
-      "Définition précise du projet",
-      "Sélection hebdomadaire de biens",
-      "Analyse des opportunités",
-      "Accompagnement à la négociation",
-      "Mise en relation avec des pros",
-      "Coordination globale",
-      "Suivi jusqu'à l'acte",
-    ],
-    highlighted: false,
-    cta: "En savoir plus",
-  },
-];
-
 export default function Offers() {
   return (
     <section id="offres" className="bg-white section-pad">
@@ -66,118 +8,130 @@ export default function Offers() {
         <div className="max-w-xl mb-14" data-reveal>
           <div className="flex items-center gap-3 mb-6">
             <div className="w-6 h-px bg-accent" />
-            <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">Aller plus loin</span>
+            <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">Comment ça commence</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-night leading-tight">
-            Tout commence par un rendez-vous.
+            Tout commence par un échange.
           </h2>
+          <p className="text-text-muted text-lg leading-relaxed mt-4">
+            Nous définissons ensemble la meilleure façon d&apos;avancer — avant de parler honoraires.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 items-stretch">
-          {offers.map((o, i) => (
-            /* Wrapper = grid item, étire à la hauteur de la rangée */
-            <div
-              key={o.title}
-              data-reveal
-              data-reveal-delay={i * 100}
-            >
-              {/* Carte = h-full pour remplir le wrapper */}
-              <div
-                className={`h-full rounded-2xl p-8 pb-28 flex flex-col relative border transition-all duration-300 ${
-                  o.highlighted
-                    ? "bg-night border-night shadow-2xl shadow-night/30 hover:-translate-y-1"
-                    : "bg-beige border-beige-dark hover:border-accent/30 hover:shadow-lg hover:-translate-y-0.5"
-                }`}
-              >
-                {/* Tag */}
-                <div className="mb-6">
-                  <span
-                    className={`text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full ${
-                      o.highlighted
-                        ? "bg-accent text-night"
-                        : "bg-white border border-beige-dark text-text-muted"
-                    }`}
-                  >
-                    {o.tag}
-                  </span>
-                </div>
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl">
 
-                {/* Titre */}
-                <h3
-                  className={`font-extrabold text-lg leading-snug mb-2 ${
-                    o.highlighted ? "text-white" : "text-night"
-                  }`}
+          {/* Carte 1 — Appel gratuit */}
+          <div data-reveal>
+            <div className="h-full rounded-2xl p-8 pb-28 flex flex-col relative border
+              bg-beige border-beige-dark hover:border-accent/30 hover:shadow-lg
+              hover:-translate-y-0.5 transition-all duration-300">
+
+              <div className="mb-6">
+                <span className="text-xs font-bold uppercase tracking-widest px-3 py-1.5
+                  rounded-full bg-white border border-beige-dark text-text-muted">
+                  Gratuit
+                </span>
+              </div>
+
+              <h3 className="font-extrabold text-lg leading-snug mb-2 text-night">
+                Premier échange — 30 min
+              </h3>
+
+              <p className="text-xs text-text-light mb-5">Sans engagement</p>
+
+              <p className="text-base leading-relaxed mb-6 text-text-muted">
+                Un échange pour comprendre votre situation, identifier vos enjeux
+                et déterminer ensemble la meilleure suite à donner à votre projet.
+              </p>
+
+              <ul className="space-y-3">
+                {[
+                  "Comprendre votre projet",
+                  "Identifier vos enjeux",
+                  "Vérifier la faisabilité",
+                  "Définir la meilleure suite",
+                ].map((f) => (
+                  <li key={f} className="flex items-start gap-3 text-base group/feat cursor-default">
+                    <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-accent/70
+                      transition-transform duration-200 group-hover/feat:scale-125" />
+                    <span className="text-text-muted group-hover/feat:text-text-main transition-colors duration-200">
+                      {f}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="absolute bottom-8 left-8 right-8">
+                <a
+                  href="#contact"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4
+                    font-bold text-sm bg-night text-white hover:bg-night-mid
+                    transition-all duration-200 hover:-translate-y-px"
                 >
-                  {o.title}
-                </h3>
-
-                {/* Prix */}
-                <div className="mb-5">
-                  <span
-                    className={`text-2xl font-black ${
-                      o.highlighted ? "text-accent" : "text-night"
-                    }`}
-                  >
-                    {o.price}
-                  </span>
-                  <span
-                    className={`text-xs ml-2 ${
-                      o.highlighted ? "text-white/60" : "text-text-light"
-                    }`}
-                  >
-                    {o.priceNote}
-                  </span>
-                </div>
-
-                {/* Description */}
-                <p
-                  className={`text-base leading-relaxed mb-6 ${
-                    o.highlighted ? "text-white/75" : "text-text-muted"
-                  }`}
-                >
-                  {o.description}
-                </p>
-
-                {/* Features */}
-                <ul className="space-y-3">
-                  {o.features.map((f) => (
-                    <li key={f} className="flex items-start gap-3 text-base group/feat cursor-default">
-                      <span
-                        className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 transition-transform
-                          duration-200 group-hover/feat:scale-125 ${
-                          o.highlighted ? "bg-accent" : "bg-accent/70"
-                        }`}
-                      />
-                      <span
-                        className={`transition-colors duration-200 ${
-                          o.highlighted
-                            ? "text-white/85 group-hover/feat:text-white"
-                            : "text-text-muted group-hover/feat:text-text-main"
-                        }`}
-                      >
-                        {f}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA — absolu, ancré en bas de chaque carte */}
-                <div className="absolute bottom-8 left-8 right-8">
-                  <a
-                    href="#contact"
-                    className={`flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4
-                      font-bold text-sm transition-all duration-200 hover:-translate-y-px ${
-                        o.highlighted
-                          ? "bg-accent text-night hover:bg-accent-hover"
-                          : "bg-night text-white hover:bg-night-mid"
-                      }`}
-                  >
-                    {o.cta} <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
-                </div>
+                  Clarifier mon projet (30 min) <ArrowRight className="w-3.5 h-3.5" />
+                </a>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Carte 2 — Accompagnement complet */}
+          <div data-reveal data-reveal-delay="100">
+            <div className="h-full rounded-2xl p-8 pb-28 flex flex-col relative border
+              bg-night border-night shadow-2xl shadow-night/30
+              hover:-translate-y-1 transition-all duration-300">
+
+              <div className="mb-6">
+                <span className="text-xs font-bold uppercase tracking-widest px-3 py-1.5
+                  rounded-full bg-accent text-night">
+                  Accompagnement A → Z
+                </span>
+              </div>
+
+              <h3 className="font-extrabold text-lg leading-snug mb-2 text-white">
+                Jusqu&apos;à la signature
+              </h3>
+
+              <p className="text-xs text-white/50 mb-5">
+                Honoraires sur mesure — définis après le premier échange
+              </p>
+
+              <p className="text-base leading-relaxed mb-6 text-white/75">
+                Nous prenons en charge l&apos;intégralité de votre parcours d&apos;achat,
+                de la définition du projet jusqu&apos;à l&apos;acte de vente.
+              </p>
+
+              <ul className="space-y-3">
+                {[
+                  "Définition précise du projet",
+                  "Sélection hebdomadaire de biens",
+                  "Analyse des opportunités",
+                  "Accompagnement à la négociation",
+                  "Coordination de tous les intervenants",
+                  "Suivi jusqu'à l'acte authentique",
+                ].map((f) => (
+                  <li key={f} className="flex items-start gap-3 text-base group/feat cursor-default">
+                    <span className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-accent
+                      transition-transform duration-200 group-hover/feat:scale-125" />
+                    <span className="text-white/85 group-hover/feat:text-white transition-colors duration-200">
+                      {f}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="absolute bottom-8 left-8 right-8">
+                <a
+                  href="#contact"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4
+                    font-bold text-sm bg-accent text-night hover:bg-accent-hover
+                    transition-all duration-200 hover:-translate-y-px"
+                >
+                  Démarrer l&apos;accompagnement <ArrowRight className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
