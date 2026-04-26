@@ -8,7 +8,7 @@ import { getAllPosts, formatDate } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Blog — Conseils achat immobilier | KAP",
   description:
-    "Négociation, financement, compromis de vente, chasseur immobilier… Tous les conseils de KAP pour acheter un bien immobilier dans les meilleures conditions.",
+    "Négociation, financement, compromis de vente, stratégie d'achat… Tous les conseils de KAP pour acheter un bien immobilier dans les meilleures conditions.",
   openGraph: {
     title: "Blog — Conseils achat immobilier | KAP",
     description:
@@ -37,9 +37,9 @@ export default function BlogPage() {
               Le blog KAP
             </h1>
             <p className="text-white/60 text-lg max-w-2xl leading-relaxed">
-              Négociation, financement, pièges à éviter, rôle du chasseur
-              immobilier… Des articles concrets pour acheter dans les meilleures
-              conditions.
+              Négociation, financement, compromis de vente, stratégie d&apos;achat…
+              Des articles concrets pour acheter dans les meilleures conditions,
+              accompagné à chaque étape.
             </p>
           </div>
         </section>
