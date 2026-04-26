@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getAllPosts, getPostBySlug, formatDate } from "@/lib/blog";
+import { markdownToHtml } from "@/lib/markdown";
 
 interface Props {
   params: { slug: string };
@@ -34,6 +34,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default function ArticlePage({ params }: Props) {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
+
+  const htmlContent = markdownToHtml(post.content);
 
   return (
     <>
@@ -89,9 +91,10 @@ export default function ArticlePage({ params }: Props) {
         {/* Contenu */}
         <section className="bg-beige py-16 px-6 md:px-12">
           <div className="max-w-3xl mx-auto">
-            <article className="prose-kap">
-              <MDXRemote source={post.content} />
-            </article>
+            <article
+              className="prose-kap"
+              dangerouslySetInnerHTML={{ __html: htmlContent }}
+            />
           </div>
         </section>
 
