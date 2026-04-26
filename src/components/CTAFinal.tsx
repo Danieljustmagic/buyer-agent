@@ -67,32 +67,24 @@ export default function CTAFinal() {
               <div className="flex items-center gap-3 mb-8" data-reveal>
                 <div className="w-6 h-px bg-accent" />
                 <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
-                  La vraie question
+                  Votre projet
                 </span>
               </div>
 
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-3"
+                className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-8"
                 data-reveal
                 data-reveal-delay="80"
               >
-                Faisons le point sur votre projet.
+                Vous méritez d&apos;acheter avec quelqu&apos;un dans votre camp.
               </h2>
-
-              <p
-                className="text-accent/70 text-xs font-semibold tracking-[0.18em] uppercase mb-8"
-                data-reveal
-                data-reveal-delay="130"
-              >
-                Le bon cap pour votre projet
-              </p>
 
               <blockquote
                 className="font-serif italic text-xl text-white/80 mb-10 leading-relaxed border-l-2 border-accent pl-6"
                 data-reveal
-                data-reveal-delay="180"
+                data-reveal-delay="160"
               >
-                &ldquo;Le sujet n&apos;est pas de savoir si vous allez acheter. Le sujet est de savoir si vous allez acheter dans les bonnes conditions.&rdquo;
+                &ldquo;La plupart des acheteurs ne manquent pas de motivation. Ce qui leur manque, c&apos;est quelqu&apos;un à leurs côtés pour transformer cette motivation en décision juste — et sereine.&rdquo;
               </blockquote>
 
               <a
