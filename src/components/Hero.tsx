@@ -96,12 +96,12 @@ export default function Hero() {
 
         {/* Bas de page – chiffres animés */}
         <HeroStats />
+      </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-56 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 animate-bounce">
-          <span className="text-white/80 text-xs tracking-widest uppercase font-semibold">Découvrir</span>
-          <ChevronDown className="w-5 h-5 text-white/80" />
-        </div>
+      {/* Scroll indicator — ancré à la section pour centrage parfait sur tous écrans */}
+      <div className="absolute bottom-10 left-0 right-0 flex flex-col items-center gap-1.5 animate-bounce pointer-events-none">
+        <span className="text-white/80 text-xs tracking-widest uppercase font-semibold">Découvrir</span>
+        <ChevronDown className="w-5 h-5 text-white/80" />
       </div>
     </section>
   );
