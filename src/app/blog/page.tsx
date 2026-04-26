@@ -6,11 +6,11 @@ import Footer from "@/components/Footer";
 import { getAllPosts, formatDate } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog — Conseils achat immobilier | KAP",
+  title: "Décryptages — Conseils achat immobilier | KAP",
   description:
-    "Négociation, financement, compromis de vente, stratégie d'achat… Tous les conseils de KAP pour acheter un bien immobilier dans les meilleures conditions.",
+    "Négociation, financement, compromis de vente, stratégie d'achat… Tous les décryptages de KAP pour acheter un bien immobilier dans les meilleures conditions.",
   openGraph: {
-    title: "Blog — Conseils achat immobilier | KAP",
+    title: "Décryptages — Conseils achat immobilier | KAP",
     description:
       "Nos conseils pour acheter un bien immobilier dans les meilleures conditions.",
     type: "website",
@@ -30,11 +30,11 @@ export default function BlogPage() {
             <div className="flex items-center gap-3 mb-8">
               <div className="w-6 h-px bg-accent" />
               <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
-                Ressources &amp; conseils
+                Décryptages
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-5">
-              Le blog KAP
+              Décryptages
             </h1>
             <p className="text-white/60 text-lg max-w-2xl leading-relaxed">
               Négociation, financement, compromis de vente, stratégie d&apos;achat…

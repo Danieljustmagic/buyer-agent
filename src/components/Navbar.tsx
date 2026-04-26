@@ -15,7 +15,7 @@ export default function Navbar() {
             href="/blog"
             className="text-white/50 hover:text-white text-sm font-medium transition-colors duration-200"
           >
-            Blog
+            Décryptages
           </Link>
           <a
             href="/#contact"

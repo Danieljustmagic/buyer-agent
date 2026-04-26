@@ -52,7 +52,7 @@ export default function Footer() {
                 href="/blog"
                 className="text-white/35 text-sm hover:text-white/60 transition-colors duration-200"
               >
-                Blog
+                Décryptages
               </Link>
               <a
                 href="mailto:contact@kap-immo.fr"
