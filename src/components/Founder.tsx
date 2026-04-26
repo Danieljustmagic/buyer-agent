@@ -82,8 +82,12 @@ export default function Founder() {
               <p className="text-white/65 text-lg leading-relaxed">
                 J&apos;ai exercé comme agent immobilier. J&apos;ai vu de
                 l&apos;intérieur comment les transactions se construisent du côté
-                vendeur. C&apos;est ce regard — des deux côtés — qui fonde la
-                méthode KAP.
+                vendeur. Quand on a vu le jeu de l&apos;intérieur, on ne peut
+                plus regarder un acheteur avancer seul sans vouloir changer
+                quelque chose.{" "}
+                <span className="text-white font-medium">
+                  C&apos;est pour ça que KAP existe.
+                </span>
               </p>
             </div>
 
