@@ -41,29 +41,26 @@ export default function Expertise() {
 
             {/* Ce que ça permet */}
             <div
-              className="bg-white/5 border border-white/10 rounded-2xl p-6
-                hover:bg-white/8 hover:border-white/15 transition-all duration-300"
+              className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden"
               data-reveal
               data-reveal-delay="120"
             >
-              <p className="text-white/60 text-sm font-semibold uppercase tracking-widest mb-5">
-                Aujourd&apos;hui, cela nous permet :
-              </p>
-              <ul className="space-y-4">
-                {abilities.map((a, i) => (
-                  <li
-                    key={a}
-                    className="flex items-start gap-3 group/item cursor-default"
-                    data-reveal
-                    data-reveal-delay={120 + i * 80}
-                  >
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0
-                      group-hover/item:scale-125 transition-transform duration-200" />
-                    <span className="text-white/80 text-base leading-relaxed
-                      group-hover/item:text-white transition-colors duration-200">{a}</span>
-                  </li>
-                ))}
-              </ul>
+              {abilities.map((a, i) => (
+                <div
+                  key={a}
+                  className={`flex items-center gap-5 px-6 py-5 group/item cursor-default
+                    hover:bg-white/8 transition-colors duration-200
+                    ${i < abilities.length - 1 ? "border-b border-white/8" : ""}`}
+                  data-reveal
+                  data-reveal-delay={120 + i * 80}
+                >
+                  <span className="text-accent font-black text-lg flex-shrink-0 w-6 text-center">
+                    {i + 1}
+                  </span>
+                  <span className="text-white/85 text-base leading-snug
+                    group-hover/item:text-white transition-colors duration-200">{a}</span>
+                </div>
+              ))}
             </div>
 
             {/* Décider avec justesse */}
