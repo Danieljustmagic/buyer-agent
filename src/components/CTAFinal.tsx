@@ -46,8 +46,8 @@ export default function CTAFinal() {
           <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-accent/25 to-transparent hidden md:block" />
 
           {/* Logo cachet */}
-          <div className="relative mb-10 opacity-30">
-            <Logo height={36} />
+          <div className="relative mb-10" style={{ mixBlendMode: "screen", opacity: 0.55 }}>
+            <Logo height={40} />
           </div>
 
           <div className="relative grid lg:grid-cols-2 gap-14 items-start">
