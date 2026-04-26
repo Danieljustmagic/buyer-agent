@@ -184,6 +184,21 @@ export default function CTAFinal() {
                     />
                   </div>
 
+                  {/* Message */}
+                  <div>
+                    <label className="block text-white/50 text-xs font-medium mb-1.5 tracking-wide">
+                      Votre projet en quelques mots
+                    </label>
+                    <textarea
+                      name="message"
+                      rows={3}
+                      className="w-full bg-white/8 border border-white/12 rounded-xl px-4 py-3
+                        text-white text-sm placeholder-white/25 focus:outline-none
+                        focus:border-accent/50 focus:bg-white/10 transition-all duration-200 resize-none"
+                      placeholder="Type de bien, localisation, budget, timing…"
+                    />
+                  </div>
+
                   {/* Submit */}
                   <button
                     type="submit"
