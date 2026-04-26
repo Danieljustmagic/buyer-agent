@@ -29,12 +29,12 @@ export default function Offers() {
               <div className="mb-6">
                 <span className="text-xs font-bold uppercase tracking-widest px-3 py-1.5
                   rounded-full bg-white border border-beige-dark text-text-muted">
-                  Gratuit
+                  Offert
                 </span>
               </div>
 
               <h3 className="font-extrabold text-lg leading-snug mb-2 text-night">
-                Premier échange — 30 min
+                30 min pour y voir plus clair
               </h3>
 
               <p className="text-xs text-text-light mb-5">Sans engagement</p>
