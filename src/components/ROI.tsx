@@ -42,11 +42,11 @@ export default function ROI() {
 
           {/* Chiffre héro */}
           <div className="flex items-baseline gap-3 mb-4">
-            <span className="text-accent font-black text-5xl md:text-6xl tracking-tight leading-none">
+            <span className="text-accent font-black text-3xl tracking-tight leading-none">
               + 22 000 €
             </span>
-            <span className="text-white/40 text-2xl font-light">—</span>
-            <span className="text-white font-black text-5xl md:text-6xl tracking-tight leading-none">56 000 €</span>
+            <span className="text-white/40 text-xl font-light">—</span>
+            <span className="text-white font-black text-3xl tracking-tight leading-none">56 000 €</span>
           </div>
 
           <p className="text-white/40 text-sm tracking-wide">
@@ -91,6 +91,35 @@ export default function ROI() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Levier expertise marché — pleine largeur */}
+        <div
+          className="bg-white/5 border border-accent/20 rounded-2xl p-6 mb-4"
+          data-reveal
+          data-reveal-delay="300"
+        >
+          <div className="flex flex-col md:flex-row md:items-start gap-6">
+            <div className="flex-shrink-0">
+              <p className="text-accent font-bold text-sm uppercase tracking-widest mb-1">Expertise marché & locale</p>
+              <p className="text-white/40 text-xs">Avantage décisif · non chiffrable</p>
+            </div>
+            <div className="w-px bg-white/10 hidden md:block" />
+            <div className="grid md:grid-cols-2 gap-4 flex-1">
+              <div className="flex items-start gap-2.5">
+                <span className="text-red-400/70 text-sm mt-0.5 flex-shrink-0">✕</span>
+                <p className="text-white/45 text-sm leading-snug">
+                  Vous ne savez pas si le prix au m² est cohérent, ni ce qui est prévu autour du bien — projets urbains, infrastructure, évolution du quartier.
+                </p>
+              </div>
+              <div className="flex items-start gap-2.5">
+                <span className="text-accent text-sm mt-0.5 flex-shrink-0">✓</span>
+                <p className="text-white/85 text-sm leading-snug">
+                  Connaissance parfaite du marché local, des projets structurants environnants et de toutes les informations utiles — pour vous positionner sur un bien avec une vision complète de son environnement proche.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Intangibles */}
