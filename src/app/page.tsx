@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import ScrollObserver from "@/components/ScrollObserver";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
+import Genesis from "@/components/Genesis";
 import Services from "@/components/Services";
 import Partnership from "@/components/Partnership";
 import Expertise from "@/components/Expertise";
@@ -20,6 +21,7 @@ export default function Home() {
       <main>
         <Hero />
         <Problem />
+        <Genesis />
         <Services />
         <Partnership />
         <Expertise />
