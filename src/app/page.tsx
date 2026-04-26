@@ -3,7 +3,6 @@ import ScrollObserver from "@/components/ScrollObserver";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import Genesis from "@/components/Genesis";
-import Founder from "@/components/Founder";
 import Services from "@/components/Services";
 import Partnership from "@/components/Partnership";
 import Expertise from "@/components/Expertise";
@@ -23,7 +22,6 @@ export default function Home() {
         <Hero />
         <Problem />
         <Genesis />
-        <Founder />
         <Services />
         <Partnership />
         <Expertise />
