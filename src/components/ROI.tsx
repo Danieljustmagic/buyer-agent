@@ -116,7 +116,7 @@ export default function ROI() {
               >
                 <p className="text-white/65 text-sm leading-snug">{item}</p>
               </div>
-            )}
+            ))}
           </div>
         </div>
 
