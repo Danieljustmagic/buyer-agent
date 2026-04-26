@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import HeroStats from "./HeroStats";
 
 export default function Hero() {
   return (
@@ -93,25 +94,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Bas de page – chiffres */}
-        <div
-          className="mt-24 pt-8 border-t border-white/10 grid grid-cols-3 gap-8 max-w-md"
-          data-reveal
-          data-reveal-delay="640"
-        >
-          {[
-            { v: "A → Z", l: "accompagnement complet" },
-            { v: "100%", l: "dans votre camp" },
-            { v: "0", l: "conflit d'intérêt" },
-          ].map((s) => (
-            <div key={s.l} className="group/stat">
-              <div className="text-xl font-black text-white group-hover/stat:text-accent transition-colors duration-200">
-                {s.v}
-              </div>
-              <div className="text-xs text-white/55 mt-1 leading-snug">{s.l}</div>
-            </div>
-          ))}
-        </div>
+        {/* Bas de page – chiffres animés */}
+        <HeroStats />
       </div>
     </section>
   );
