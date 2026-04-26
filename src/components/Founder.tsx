@@ -1,3 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
+import Logo from "./Logo";
+
 export default function Founder() {
   return (
     <section className="bg-night section-pad overflow-hidden">
@@ -93,14 +96,19 @@ export default function Founder() {
 
             {/* Signature */}
             <div
-              className="mt-10 pt-8 border-t border-white/10"
+              className="mt-10 pt-8 border-t border-white/10 flex items-end justify-between"
               data-reveal
               data-reveal-delay="240"
             >
-              <p className="text-white font-semibold text-base">Daniel Invernon</p>
-              <p className="text-accent/70 text-sm mt-1 tracking-wide">
-                Fondateur — KAP
-              </p>
+              <div>
+                <p className="text-white font-semibold text-base">Daniel Invernon</p>
+                <p className="text-accent/70 text-sm mt-1 tracking-wide">
+                  Fondateur — KAP
+                </p>
+              </div>
+              <div className="opacity-25">
+                <Logo height={32} />
+              </div>
             </div>
           </div>
 
