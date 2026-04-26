@@ -98,7 +98,7 @@ export default function Hero() {
         <HeroStats />
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-32 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 animate-bounce">
+        <div className="absolute bottom-44 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 animate-bounce">
           <span className="text-white/80 text-xs tracking-widest uppercase font-semibold">Découvrir</span>
           <ChevronDown className="w-5 h-5 text-white/80" />
         </div>
