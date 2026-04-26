@@ -78,7 +78,7 @@ export default function HeroStats() {
   return (
     <div
       ref={ref}
-      className="mt-24 pt-8 border-t border-white/10 grid grid-cols-3 gap-8 max-w-md"
+      className="mt-6 pt-8 border-t border-white/10 grid grid-cols-3 gap-8 max-w-md"
     >
       {stats.map((s) => (
         <div key={s.label} className="group/stat">
