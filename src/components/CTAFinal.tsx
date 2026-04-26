@@ -47,16 +47,6 @@ export default function CTAFinal() {
               &ldquo;Le sujet n&apos;est pas de savoir si vous allez acheter. Le sujet est de savoir si vous allez acheter dans les bonnes conditions.&rdquo;
             </p>
 
-            {/* Description */}
-            <p
-              className="text-white/75 text-lg leading-relaxed mb-10 max-w-md"
-              data-reveal
-              data-reveal-delay="220"
-            >
-              Un premier échange de 30 minutes pour comprendre votre projet,
-              identifier vos enjeux et vérifier la faisabilité. Offert, sans engagement.
-            </p>
-
             {/* CTA */}
             <div className="flex flex-col items-start gap-3" data-reveal data-reveal-delay="300">
               <a
