@@ -59,12 +59,15 @@ export default function Problem() {
           <div className="lg:pt-20" data-reveal data-reveal-delay="200">
             <div className="bg-white rounded-2xl p-8 border border-beige-dark shadow-sm
               hover:shadow-md transition-shadow duration-300">
-              <p className="text-text-muted text-base leading-relaxed mb-6">
+              <p className="text-text-muted text-base leading-relaxed mb-3">
                 Et personne ne fait tout ça pour vous.
+              </p>
+              <p className="text-text-muted text-sm leading-relaxed mb-6">
+                En face, le vendeur est accompagné d&apos;un agent professionnel dont la rémunération dépend du prix auquel vous achetez.
               </p>
               <blockquote className="border-l-2 border-accent pl-6">
                 <p className="font-serif italic text-xl text-night leading-relaxed">
-                  &ldquo;Vous engagez souvent la plus grande décision financière de votre vie… sans personne pour défendre vos intérêts.&rdquo;
+                  &ldquo;Vous engagez la plus grande décision financière de votre vie — et vous êtes le seul acteur de la transaction sans expert dans votre camp.&rdquo;
                 </p>
               </blockquote>
             </div>

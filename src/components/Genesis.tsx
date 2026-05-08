@@ -18,9 +18,12 @@ export default function Genesis() {
             immobilier dont le rôle est de défendre ses intérêts — et dont la rémunération
             dépend du prix de vente.
           </p>
-          <p className="text-white text-lg leading-relaxed font-medium">
+          <p className="text-white text-lg leading-relaxed font-medium mb-4">
             L&apos;acheteur, lui, affronte seul un environnement réglementé, complexe,
             à fort enjeu financier.
+          </p>
+          <p className="text-white/50 text-base leading-relaxed">
+            L&apos;agent vendeur connaît les transactions réelles, les délais de vente, la marge de négociation disponible. L&apos;acheteur, lui, ne voit que les annonces.
           </p>
         </div>
 

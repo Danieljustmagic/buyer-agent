@@ -14,7 +14,7 @@ export default function Offers() {
             Tout commence par un échange.
           </h2>
           <p className="text-text-muted text-lg leading-relaxed mt-4">
-            Nous définissons ensemble la meilleure façon d&apos;avancer — avant de parler honoraires.
+            Un premier échange pour comprendre votre situation, identifier vos enjeux — et construire ensemble la bonne stratégie.
           </p>
         </div>
 
@@ -92,7 +92,7 @@ export default function Offers() {
               </h3>
 
               <p className="text-xs text-white/50 mb-5">
-                Honoraires sur mesure — définis après le premier échange
+                Conditions définies ensemble — à l&apos;issue du premier échange
               </p>
 
               <p className="text-base leading-relaxed mb-6 text-white/75">

@@ -1,7 +1,7 @@
 const abilities = [
-  "Anticiper les points de blocage",
-  "Adopter les bons codes face aux interlocuteurs",
-  "Intervenir au bon moment pour sécuriser votre projet",
+  "Analyser les transactions réelles — pas seulement les annonces",
+  "Négocier avec méthode, en connaissant la situation réelle du vendeur",
+  "Coordonner chaque intervenant dans votre seul intérêt",
 ];
 
 export default function Expertise() {
@@ -15,16 +15,16 @@ export default function Expertise() {
             <div className="flex items-center gap-3 mb-8">
               <div className="w-6 h-px bg-accent" />
               <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
-                Notre équipe
+                Notre engagement
               </span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-6">
-              Des professionnels de l&apos;accompagnement immobilier à vos côtés.
+              Le seul intervenant de la transaction dont l&apos;intérêt est aligné sur le vôtre.
             </h2>
 
             <p className="text-white/70 text-lg leading-relaxed mb-10">
-              Financement, négociation, stratégie d&apos;acquisition — une expertise réunie pour défendre votre intérêt à chaque étape.
+              L&apos;agent vendeur défend le vendeur. Le notaire reste impartial. La banque place un financement. KAP, lui, ne défend qu&apos;une seule partie : vous.
             </p>
           </div>
 
@@ -63,8 +63,8 @@ export default function Expertise() {
               data-reveal-delay="200"
             >
               <p className="text-white font-semibold text-base leading-relaxed">
-                Parce qu&apos;une mauvaise décision coûte{" "}
-                <span className="text-accent">bien plus qu&apos;un accompagnement.</span>
+                Dans cette transaction, vous n&apos;avez qu&apos;une chance.{" "}
+                <span className="text-accent">Nous, nous en avons accompagné des dizaines.</span>
               </p>
             </div>
 
