@@ -45,16 +45,19 @@ export default function Services() {
         {/* Header */}
         <div className="max-w-2xl mb-16" data-reveal>
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-6 h-px bg-accent" />
-            <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
+            <div className="w-6 h-px bg-coral" />
+            <span className="font-mono text-coral text-xs tracking-[0.2em] uppercase">
               Ce que nous faisons concrètement
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-night leading-tight mb-5">
-            Vous ne gérez plus seul l&apos;une des décisions<br className="hidden md:block" /> les plus importantes de votre vie.
+          <h2
+            className="font-display font-black uppercase text-deep leading-[0.95] mb-5"
+            style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
+          >
+            Vous ne gérez plus seul l&apos;une des décisions les plus importantes de votre vie.
           </h2>
-          <p className="text-text-muted text-lg leading-relaxed">
-            De la définition de votre projet jusqu&apos;à la remise des clés — chaque étape est structurée, anticipée, sécurisée.
+          <p className="font-serif italic text-text-muted text-lg leading-relaxed">
+            De la définition du projet jusqu&apos;à la remise des clés — chaque étape est structurée, anticipée, sécurisée.
           </p>
         </div>
 
@@ -89,10 +92,12 @@ export default function Services() {
 
                     {/* Numéro + Titre */}
                     <div className="flex items-baseline gap-3 mb-3">
-                      <span className="text-xs font-black text-accent/60 tracking-widest flex-shrink-0">
+                      <span className="font-mono text-xs font-semibold text-coral/60 tracking-widest flex-shrink-0">
                         {s.num}
                       </span>
-                      <h3 className="font-bold text-night text-base leading-snug group-hover:text-accent/90 transition-colors duration-200">
+                      <h3 className="font-display font-bold uppercase text-deep text-base leading-snug
+                        group-hover:text-coral transition-colors duration-200"
+                        style={{ letterSpacing: "-0.01em" }}>
                         {s.title}
                       </h3>
                     </div>
@@ -107,8 +112,8 @@ export default function Services() {
                       {s.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-xs text-accent font-semibold bg-accent/8 border border-accent/15
-                            rounded-full px-3 py-1 hover:bg-accent/15 transition-colors duration-200"
+                          className="font-mono text-[10px] text-coral font-medium bg-coral/6 border border-coral/15
+                            rounded-full px-3 py-1 hover:bg-coral/12 transition-colors duration-200 tracking-wide"
                         >
                           {tag}
                         </span>
@@ -122,10 +127,11 @@ export default function Services() {
         </div>
 
         {/* Punchline finale */}
-        <div className="mt-14 pt-10 border-t border-stone-100" data-reveal>
-          <p className="text-xl font-semibold text-night text-center max-w-2xl mx-auto leading-relaxed">
-            Vous avancez avec méthode, sans perdre de temps,
-            <span className="text-accent"> et en limitant les risques à chaque étape.</span>
+        <div className="mt-14 pt-10 border-t border-cream-dark" data-reveal>
+          <p className="font-display font-black uppercase text-deep text-center max-w-2xl mx-auto leading-[0.95]"
+            style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
+            Vous avancez avec méthode, sans perdre de temps,{" "}
+            <span className="text-coral">et en limitant les risques à chaque étape.</span>
           </p>
         </div>
 

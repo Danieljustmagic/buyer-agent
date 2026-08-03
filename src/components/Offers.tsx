@@ -7,10 +7,13 @@ export default function Offers() {
 
         <div className="max-w-xl mb-14" data-reveal>
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-6 h-px bg-accent" />
-            <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">Comment ça commence</span>
+            <div className="w-6 h-px bg-coral" />
+            <span className="font-mono text-coral text-xs tracking-[0.2em] uppercase">Comment ça commence</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-night leading-tight">
+          <h2
+            className="font-display font-black uppercase text-deep leading-[0.95]"
+            style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
+          >
             Tout commence par un échange.
           </h2>
           <p className="text-text-muted text-lg leading-relaxed mt-4">
@@ -65,7 +68,7 @@ export default function Offers() {
                 <a
                   href="#contact"
                   className="flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4
-                    font-bold text-sm bg-night text-white hover:bg-night-mid
+                    font-bold text-sm bg-deep text-white hover:bg-deep-mid
                     transition-all duration-200 hover:-translate-y-px"
                 >
                   Clarifier mon projet (30 min) <ArrowRight className="w-3.5 h-3.5" />
@@ -123,7 +126,7 @@ export default function Offers() {
                 <a
                   href="#contact"
                   className="flex w-full items-center justify-center gap-2 rounded-xl px-6 py-4
-                    font-bold text-sm bg-accent text-night hover:bg-accent-hover
+                    font-bold text-sm bg-coral text-white hover:bg-coral-hover
                     transition-all duration-200 hover:-translate-y-px"
                 >
                   Échanger sur mon projet <ArrowRight className="w-3.5 h-3.5" />

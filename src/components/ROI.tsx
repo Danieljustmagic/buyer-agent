@@ -30,26 +30,30 @@ export default function ROI() {
         {/* Header + Grand chiffre */}
         <div className="mb-16" data-reveal>
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-6 h-px bg-accent" />
-            <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
+            <div className="w-6 h-px bg-coral" />
+            <span className="font-mono text-coral text-xs tracking-[0.2em] uppercase">
               Ce que vous gagnez concrètement
             </span>
           </div>
 
-          <p className="text-white/60 text-lg leading-relaxed mb-3">
+          <p className="text-white/55 text-base leading-relaxed mb-4 font-mono tracking-wide">
             Sur un bien à 300 000 €, un acheteur accompagné économise en moyenne
           </p>
 
           {/* Chiffre héro */}
-          <div className="flex items-baseline gap-3 mb-4">
-            <span className="text-accent font-black text-3xl tracking-tight leading-none">
+          <div className="flex items-baseline gap-4 mb-4">
+            <span className="font-display font-black text-coral uppercase"
+              style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", lineHeight: "0.9" }}>
               + 22 000 €
             </span>
-            <span className="text-white/40 text-xl font-light">—</span>
-            <span className="text-white font-black text-3xl tracking-tight leading-none">56 000 €</span>
+            <span className="text-white/30 text-2xl font-light">—</span>
+            <span className="font-display font-black text-white uppercase"
+              style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)", lineHeight: "0.9" }}>
+              56 000 €
+            </span>
           </div>
 
-          <p className="text-white/40 text-sm tracking-wide">
+          <p className="font-mono text-white/30 text-xs tracking-widest uppercase">
             Négociation · Financement · Assurance emprunteur · Voici comment ↓
           </p>
         </div>
@@ -66,12 +70,12 @@ export default function ROI() {
             >
               {/* Gain */}
               <div className="mb-5">
-                <span className="text-accent font-black text-3xl tracking-tight">{l.gain}</span>
-                <span className="text-white/40 text-base ml-2">à {l.gainTo.replace("à ", "")}</span>
+                <span className="font-display font-black text-coral uppercase text-3xl">{l.gain}</span>
+                <span className="font-mono text-white/35 text-sm ml-2">{l.gainTo}</span>
               </div>
 
               {/* Label */}
-              <p className="text-white font-bold text-sm uppercase tracking-widest mb-5">
+              <p className="font-mono text-white font-semibold text-xs uppercase tracking-widest mb-5">
                 {l.label}
               </p>
 
@@ -101,7 +105,7 @@ export default function ROI() {
         >
           <div className="flex flex-col md:flex-row md:items-start gap-6">
             <div className="flex-shrink-0">
-              <p className="text-accent font-bold text-sm uppercase tracking-widest mb-1">Expertise marché & locale</p>
+              <p className="font-mono text-coral font-semibold text-xs uppercase tracking-widest mb-1">Expertise marché & locale</p>
               <p className="text-white/40 text-xs">Avantage décisif · non chiffrable</p>
             </div>
             <div className="w-px bg-white/10 hidden md:block" />
@@ -128,7 +132,7 @@ export default function ROI() {
           data-reveal
           data-reveal-delay="200"
         >
-          <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-6">
+          <p className="font-mono text-white/35 text-xs font-medium uppercase tracking-widest mb-6">
             Et ce qu'on ne peut pas chiffrer
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">

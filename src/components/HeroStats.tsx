@@ -82,10 +82,13 @@ export default function HeroStats() {
     >
       {stats.map((s) => (
         <div key={s.label} className="group/stat">
-          <div className="text-xl font-black text-white group-hover/stat:text-accent transition-colors duration-200 tabular-nums">
+          <div className="font-mono text-xl font-semibold text-white group-hover/stat:text-coral
+            transition-colors duration-200 tabular-nums">
             {s.value}{s.suffix}
           </div>
-          <div className="text-xs text-white/55 mt-1 leading-snug">{s.label}</div>
+          <div className="font-mono text-[10px] text-white/40 mt-1.5 leading-snug tracking-wide uppercase">
+            {s.label}
+          </div>
         </div>
       ))}
     </div>

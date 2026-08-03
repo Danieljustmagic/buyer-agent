@@ -25,7 +25,7 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <div className="text-right">
                 <p className="text-white text-sm font-semibold">Daniel Invernon</p>
-                <p className="text-accent/70 text-xs mt-0.5 tracking-wide">Fondateur — KAP</p>
+                <p className="text-coral/70 text-xs mt-0.5 tracking-wide font-mono uppercase">Fondateur — KAP</p>
               </div>
               <div className="relative flex-shrink-0">
                 {/* Halo accent */}
@@ -43,7 +43,7 @@ export default function Footer() {
             <div className="flex flex-col gap-3 text-right">
               <a
                 href="/#contact"
-                className="text-accent text-sm font-semibold hover:text-accent-hover
+                className="text-coral text-sm font-semibold hover:text-coral-hover
                   transition-colors duration-200"
               >
                 Prendre rendez-vous →

@@ -10,12 +10,15 @@ export default function Partnership() {
           {/* Left — texte */}
           <div data-reveal>
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-6 h-px bg-accent" />
-              <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
+              <div className="w-6 h-px bg-coral" />
+              <span className="font-mono text-coral text-xs tracking-[0.2em] uppercase">
                 Un accompagnement en équipe
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-night leading-tight mb-6">
+            <h2
+              className="font-display font-black uppercase text-deep leading-[0.95] mb-6"
+              style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)" }}
+            >
               Ce que nous proposons n&apos;est pas une délégation complète.
             </h2>
             <p className="text-text-muted text-lg leading-relaxed mb-8">
@@ -23,8 +26,8 @@ export default function Partnership() {
             </p>
 
             {/* Punchline finale */}
-            <div className="border-l-2 border-accent pl-6 mt-10">
-              <p className="font-serif italic text-lg text-night leading-relaxed">
+            <div className="border-l-2 border-coral pl-6 mt-10">
+              <p className="font-serif italic text-lg text-deep leading-relaxed">
                 &ldquo;Nous avançons ensemble, avec un objectif commun : prendre la bonne décision dans les bonnes conditions.&rdquo;
               </p>
             </div>
@@ -40,8 +43,8 @@ export default function Partnership() {
               data-reveal-delay="100"
             >
               <div className="flex items-center gap-2 mb-5">
-                <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                <span className="text-accent text-xs font-bold uppercase tracking-widest">Nous</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-coral" />
+                <span className="font-mono text-coral text-xs font-semibold uppercase tracking-widest">Nous</span>
               </div>
               <ul className="space-y-3">
                 {ourRole.map((item) => (

@@ -21,10 +21,13 @@ export default function Comparison() {
 
         <div className="max-w-xl mb-14" data-reveal>
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-6 h-px bg-accent" />
-            <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">La différence</span>
+            <div className="w-6 h-px bg-coral" />
+            <span className="font-mono text-coral text-xs tracking-[0.2em] uppercase">La différence</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-night leading-tight">
+          <h2
+            className="font-display font-black uppercase text-deep leading-[0.95]"
+            style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
+          >
             Seul ou accompagné — ce n&apos;est pas le même parcours.
           </h2>
         </div>
@@ -64,15 +67,15 @@ export default function Comparison() {
             data-reveal-delay="160"
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-2 h-2 rounded-full bg-accent" />
-              <h3 className="font-bold text-accent text-sm uppercase tracking-widest">Avec nous</h3>
+              <div className="w-2 h-2 rounded-full bg-coral" />
+              <h3 className="font-mono font-semibold text-coral text-xs uppercase tracking-widest">Avec nous</h3>
             </div>
             <ul className="space-y-4">
               {withMe.map((item, i) => (
                 <li key={item} className="flex items-center gap-4 group/item cursor-default
                   hover:translate-x-1 transition-transform duration-200">
-                  <span className="text-xs text-accent/90 font-bold w-4 flex-shrink-0
-                    group-hover/item:text-accent transition-colors duration-200">
+                  <span className="font-mono text-xs text-coral/80 font-semibold w-4 flex-shrink-0
+                    group-hover/item:text-coral transition-colors duration-200">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="w-px h-4 bg-accent/20 flex-shrink-0" />

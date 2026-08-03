@@ -14,16 +14,19 @@ export default function Expertise() {
           <div data-reveal>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-6 h-px bg-accent" />
-              <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
+              <span className="font-mono text-coral text-xs tracking-[0.2em] uppercase">
                 Notre engagement
               </span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight mb-6">
-              Le seul intervenant de la transaction dont l&apos;intérêt est aligné sur le vôtre.
+            <h2
+              className="font-display font-black uppercase text-white leading-[0.92] mb-6"
+              style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
+            >
+              Le seul intervenant dont l&apos;intérêt est aligné sur le vôtre.
             </h2>
 
-            <p className="text-white/70 text-lg leading-relaxed mb-10">
+            <p className="text-white/65 text-lg leading-relaxed mb-10 font-serif italic">
               L&apos;agent vendeur défend le vendeur. Le notaire reste impartial. La banque place un financement. KAP, lui, ne défend qu&apos;une seule partie : vous.
             </p>
           </div>
@@ -46,7 +49,7 @@ export default function Expertise() {
                   data-reveal
                   data-reveal-delay={120 + i * 80}
                 >
-                  <span className="text-accent font-black text-lg flex-shrink-0 w-6 text-center">
+                  <span className="font-mono text-coral font-semibold text-sm flex-shrink-0 w-6 text-center">
                     {i + 1}
                   </span>
                   <span className="text-white/85 text-base leading-snug
@@ -62,9 +65,10 @@ export default function Expertise() {
               data-reveal
               data-reveal-delay="200"
             >
-              <p className="text-white font-semibold text-base leading-relaxed">
+              <p className="font-display font-bold uppercase text-white text-base leading-snug"
+                style={{ letterSpacing: "-0.01em" }}>
                 Dans cette transaction, vous n&apos;avez qu&apos;une chance.{" "}
-                <span className="text-accent">Nous, nous en avons accompagné des dizaines.</span>
+                <span className="text-coral">Nous, nous en avons accompagné des dizaines.</span>
               </p>
             </div>
 

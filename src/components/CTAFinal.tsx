@@ -66,13 +66,14 @@ export default function CTAFinal() {
             <div>
               <div className="flex items-center gap-3 mb-8" data-reveal>
                 <div className="w-6 h-px bg-accent" />
-                <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">
+                <span className="font-mono text-coral text-xs tracking-[0.2em] uppercase">
                   Votre projet
                 </span>
               </div>
 
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-8"
+                className="font-display font-black uppercase text-white leading-[0.92] mb-8"
+                style={{ fontSize: "clamp(2.5rem, 5.5vw, 4.5rem)" }}
                 data-reveal
                 data-reveal-delay="80"
               >
@@ -203,9 +204,9 @@ export default function CTAFinal() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full flex items-center justify-center gap-3 bg-accent text-night
-                      font-bold px-8 py-4 rounded-xl text-sm tracking-wide hover:bg-accent-hover
-                      transition-all duration-200 shadow-lg shadow-accent/20 hover:-translate-y-0.5
+                    className="w-full flex items-center justify-center gap-3 bg-coral text-white
+                      font-bold px-8 py-4 rounded-xl text-sm tracking-wide hover:bg-coral-hover
+                      transition-all duration-200 shadow-lg shadow-coral/25 hover:-translate-y-0.5
                       disabled:opacity-60 disabled:cursor-not-allowed mt-2"
                   >
                     <Calendar className="w-4 h-4" />

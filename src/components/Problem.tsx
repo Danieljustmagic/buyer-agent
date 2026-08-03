@@ -1,83 +1,86 @@
 const tasks = [
-  "Définir un projet réaliste",
-  "Trouver les bons biens",
-  "Analyser leur valeur réelle",
-  "Négocier au bon moment",
-  "Sécuriser le financement",
-  "Coordonner tous les intervenants",
+  { num: "01", label: "Définir un projet réaliste" },
+  { num: "02", label: "Trouver les bons biens" },
+  { num: "03", label: "Analyser leur valeur réelle" },
+  { num: "04", label: "Négocier au bon moment" },
+  { num: "05", label: "Sécuriser le financement" },
+  { num: "06", label: "Coordonner tous les intervenants" },
 ];
 
 export default function Problem() {
   return (
-    <section className="bg-beige section-pad">
+    <section className="bg-cream section-pad">
       <div className="container-main">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
 
           {/* Left */}
           <div>
             <div className="flex items-center gap-3 mb-8" data-reveal>
-              <div className="w-6 h-px bg-accent" />
-              <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase">Le constat</span>
+              <div className="w-6 h-px bg-coral" />
+              <span className="font-mono text-coral text-xs tracking-[0.2em] uppercase">Le constat</span>
             </div>
             <h2
-              className="text-3xl md:text-4xl font-extrabold text-night leading-tight mb-6"
+              className="font-display font-black uppercase text-deep leading-[0.95] mb-8"
+              style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)" }}
               data-reveal
               data-reveal-delay="80"
             >
-              Acheter aujourd&apos;hui implique de gérer soi-même l&apos;ensemble du processus.
+              Acheter, c&apos;est gérer seul l&apos;une des décisions les plus complexes de sa vie.
             </h2>
             <p
-              className="text-text-muted text-lg leading-relaxed mb-8"
+              className="font-mono text-text-muted text-xs tracking-widest uppercase mb-6"
               data-reveal
-              data-reveal-delay="160"
+              data-reveal-delay="140"
             >
-              Pour acheter, vous devez :
+              Ce que vous devez assumer seul :
             </p>
 
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               {tasks.map((task, i) => (
                 <li
-                  key={task}
+                  key={task.label}
                   className="flex items-center gap-4 group/item hover:translate-x-1
                     transition-transform duration-200 cursor-default"
                   data-reveal
-                  data-reveal-delay={200 + i * 70}
+                  data-reveal-delay={180 + i * 60}
                 >
-                  <span className="text-sm font-bold text-accent w-5 flex-shrink-0
-                    group-hover/item:scale-110 transition-transform duration-200">
-                    {String(i + 1).padStart(2, "0")}
+                  <span className="font-mono text-xs font-semibold text-coral/70 w-6 flex-shrink-0
+                    group-hover/item:text-coral transition-colors duration-200">
+                    {task.num}
                   </span>
-                  <span className="w-px h-4 bg-accent/25 flex-shrink-0" />
-                  <span className="text-text-main font-medium group-hover/item:text-night
-                    transition-colors duration-200">{task}</span>
+                  <span className="w-px h-4 bg-coral/20 flex-shrink-0" />
+                  <span className="text-text-main font-medium group-hover/item:text-deep
+                    transition-colors duration-200">{task.label}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Right — punchline */}
-          <div className="lg:pt-20" data-reveal data-reveal-delay="200">
-            <div className="bg-white rounded-2xl p-8 border border-beige-dark shadow-sm
+          <div className="lg:pt-16" data-reveal data-reveal-delay="200">
+            <div className="bg-white rounded-2xl p-8 border border-cream-dark shadow-sm
               hover:shadow-md transition-shadow duration-300">
-              <p className="text-text-muted text-base leading-relaxed mb-3">
+              <p className="font-mono text-text-muted text-xs tracking-widest uppercase mb-4">
+                Le problème
+              </p>
+              <p className="text-text-muted text-base leading-relaxed mb-4">
                 Et personne ne fait tout ça pour vous.
               </p>
               <p className="text-text-muted text-sm leading-relaxed mb-6">
                 En face, le vendeur est accompagné d&apos;un agent professionnel dont la rémunération dépend du prix auquel vous achetez.
               </p>
-              <blockquote className="border-l-2 border-accent pl-6">
-                <p className="font-serif italic text-xl text-night leading-relaxed">
+              <blockquote className="border-l-2 border-coral pl-6">
+                <p className="font-serif italic text-xl text-deep leading-relaxed">
                   &ldquo;Vous engagez la plus grande décision financière de votre vie — et vous êtes le seul acteur de la transaction sans expert dans votre camp.&rdquo;
                 </p>
               </blockquote>
             </div>
 
-            {/* Jalon visuel */}
             <div className="mt-8 flex items-center gap-4">
-              <div className="w-3 h-3 rounded-full bg-accent flex-shrink-0" />
-              <div className="h-px flex-1 bg-gradient-to-r from-accent/40 to-transparent" />
+              <div className="w-3 h-3 rounded-full bg-coral flex-shrink-0" />
+              <div className="h-px flex-1 bg-gradient-to-r from-coral/30 to-transparent" />
             </div>
-            <p className="text-text-muted text-base mt-3 pl-7">
+            <p className="text-text-muted text-sm mt-3 pl-7">
               C&apos;est là qu&apos;intervient un accompagnement structuré.
             </p>
           </div>
